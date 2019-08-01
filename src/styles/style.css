@@ -1,0 +1,56 @@
+:root {
+  --textDark: #333;
+  --richBlack: #040404;
+  --blue: #1d3461;
+  --teal: #0c7489;
+  --action: #fe313d;
+  --actionHover: #f61b26;
+  --offWhite: #eee;
+}
+
+body {
+  background-color: var(--offWhite);
+  color: var(--textDark);
+  font-family: Lato, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto,
+    Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+  font-size: 18px;
+  line-height: 1.4;
+}
+
+/* Headings */
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: Montserrat, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto,
+    Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+  font-weight: 900;
+}
+
+h1 {
+  font-size: 2.6em;
+}
+
+h2 {
+  margin: 1.5em 0 0;
+}
+
+a {
+  color: var(--action);
+  text-decoration: none;
+  transition: 250ms;
+}
+
+a:hover {
+  color: var(--actionHover);
+}
+
+blockquote {
+  background: white;
+  padding: 1px 20px;
+  border-left: 4px solid var(--teal);
+  border-radius: 0 5px 5px 0;
+  box-shadow: 2px 2px 8px rgba(0, 0, 0, 0.05);
+}
