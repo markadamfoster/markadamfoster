@@ -1,6 +1,6 @@
 ---
 templateKey: blog-post
-title: 'TEMPLATE TITLE'
+title: 'POST_TITLE'
 date: 2019-04-05T06:00:00.000Z
 description: ''
 published: false
