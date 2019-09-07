@@ -4,7 +4,7 @@ module.exports = {
     author: 'Mark Foster',
     description:
       'Mark is a web developer in Boise, Idaho who writes about JavaScript, React, and product creation.',
-    siteUrl: 'https://markfoster.dev',
+    siteUrl: 'https://markadamfoster.com',
   },
   plugins: [
     {
