@@ -77,8 +77,9 @@ const Text = styled.div`
   }
 
   h1 {
-    margin: 0;
+    margin: 20px 0 0;
     font-size: 72px;
+    line-height: 1.1;
 
     @media (max-width: 830px) {
       font-size: 58px;
