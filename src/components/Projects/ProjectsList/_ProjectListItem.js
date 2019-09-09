@@ -6,7 +6,7 @@ import Link from 'gatsby-link'
 import TechBadges from '../ProjectsShared/TechBadges'
 import { colors } from 'src/Constants'
 
-class PortfolioListItem extends Component {
+class ProjectListItem extends Component {
   static propTypes = {
     project: PropTypes.object.isRequired,
   }
@@ -28,7 +28,7 @@ class PortfolioListItem extends Component {
   }
 }
 
-export default PortfolioListItem
+export default ProjectListItem
 
 const Wrapper = styled(Link)`
   display: flex;

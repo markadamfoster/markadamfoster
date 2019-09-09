@@ -30,8 +30,9 @@ export const projectData = [
     cover: photoInvoiceCover,
     subtitle: 'SaaS Web App: Upfront Invoicing for Real Estate Photographers',
     summary:
-      'The best way for real estate photographers to invoice clients. A React-based web application featuring integration with Stripe and Amazon S3.',
+      'The best way for photographers to invoice clients. A React-based web application with an ExpressJS & MongoDB backend, featuring integration with Stripe and Amazon S3.',
     badges: ['react', 'redux', 'styled-components'],
+    featured: true,
   },
   {
     name: 'Check-In',
@@ -48,8 +49,9 @@ export const projectData = [
     cover: adminConsoleCover,
     subtitle: "Mobile App: Live Roster for Children's Check-In",
     summary:
-      'A mobile application for iOS and Android built with React Native, the Expo framework, and Redux for application state management.',
+      'A mobile app for iOS and Android built with React Native, the Expo framework, and Redux for application state management.',
     badges: ['react', 'redux', 'expo'],
+    featured: true,
   },
   {
     name: 'PrintHub Setup App',
@@ -74,8 +76,9 @@ export const projectData = [
     cover: panoractivesCover,
     subtitle: 'Website & Business: Real Estate Photography',
     summary:
-      'A mobile-friendly WordPress site displaying full-page imagery, photo galleries, and online scheduling. Built on the Sydney theme by aThemes, with a child theme for needed customizations.',
+      'A mobile-friendly WordPress site displaying full-page imagery, photo galleries, and online scheduling. Uses a child theme for needed customizations.',
     badges: ['wordpress'],
+    featured: true,
   },
   {
     name: 'LEAP Charities',

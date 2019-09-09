@@ -15,8 +15,8 @@ class HeaderLarge extends Component {
           <Text>
             <h1>Mark Foster</h1>
             <p>
-              Developer and maker specializing in JavaScript &amp; React. I
-              learn in public and share my findings here and on{' '}
+              Developer and maker specializing in JavaScript &amp; React. You
+              can also find me on{' '}
               <a href="https://twitter.com/markadamfoster">Twitter</a>.
             </p>
           </Text>
