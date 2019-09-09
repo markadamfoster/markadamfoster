@@ -33,5 +33,7 @@ const ProjectsWrapper = styled.div`
 `
 
 const SeeAll = styled.div`
-  // text-align: center;
+  @media (max-width: 500px) {
+    text-align: center;
+  }
 `

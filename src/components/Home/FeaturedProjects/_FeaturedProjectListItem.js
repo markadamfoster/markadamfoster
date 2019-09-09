@@ -35,15 +35,28 @@ export default FeaturedProjectListItem
 const Wrapper = styled.div`
   display: flex;
   color: ${colors.textDark};
+
+  @media (max-width: 500px) {
+    flex-direction: column;
+  }
 `
 
 const Left = styled.div`
   width: 40%;
+
+  @media (max-width: 500px) {
+    width: 100%;
+  }
 `
 
 const Right = styled.div`
   width: 60%;
   padding: 0 20px;
+
+  @media (max-width: 500px) {
+    width: 100%;
+    padding: 0;
+  }
 `
 
 const Cover = styled.img`
@@ -64,6 +77,10 @@ const Title = styled.div`
 
   @media (max-width: 700px) {
     font-size: 24px;
+  }
+
+  @media (max-width: 500px) {
+    text-align: center;
   }
 `
 

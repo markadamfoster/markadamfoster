@@ -80,6 +80,7 @@ const Text = styled.div`
     margin: 20px 0 0;
     font-size: 72px;
     line-height: 1.1;
+    text-align: left;
 
     @media (max-width: 830px) {
       font-size: 58px;
