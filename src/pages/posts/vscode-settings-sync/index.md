@@ -1,6 +1,6 @@
 ---
 templateKey: blog-post
-title: 'Syncing VSCode Settings & Snippets Between Computers'
+title: 'How to Sync VSCode Settings & Snippets Between Computers'
 date: 2019-10-05T06:00:00.000Z
 description: ''
 published: true

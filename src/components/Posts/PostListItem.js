@@ -3,7 +3,7 @@ import PropTypes from 'prop-types'
 import styled from 'styled-components'
 import Link from 'gatsby-link'
 
-import Tags from './_Tags'
+// import Tags from './_Tags'
 import { colors } from 'src/Constants'
 
 class PostListEntry extends Component {
@@ -22,7 +22,7 @@ class PostListEntry extends Component {
 
         <Info>
           <PostDate>{date.toLocaleDateString('en-US')}</PostDate>
-          <Tags tags={post.frontmatter.tags} />
+          {/* <Tags tags={post.frontmatter.tags} /> */}
         </Info>
       </Wrapper>
     )
@@ -43,7 +43,7 @@ const Wrapper = styled.li`
 
 const Title = styled.h3`
   font-family: Lato;
-  margin: 5px 0 10px;
+  margin: 5px 0 2px;
   font-size: 19px;
   line-height: 32px;
   font-weight: 400;
@@ -62,8 +62,6 @@ const Title = styled.h3`
 
 const Info = styled.div`
   display: flex;
-  margin-left: 20px;
-  margin-top: 10px;
 
   @media (max-width: 600px) {
     flex-direction: column;

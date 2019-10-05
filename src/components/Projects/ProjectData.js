@@ -51,7 +51,6 @@ export const projectData = [
     summary:
       'A mobile app for iOS and Android built with React Native, the Expo framework, and Redux for application state management.',
     badges: ['react', 'redux', 'expo'],
-    featured: true,
   },
   {
     name: 'PrintHub Setup App',
@@ -78,7 +77,6 @@ export const projectData = [
     summary:
       'A mobile-friendly WordPress site displaying full-page imagery, photo galleries, and online scheduling. Uses a child theme for needed customizations.',
     badges: ['wordpress'],
-    featured: true,
   },
   {
     name: 'LEAP Charities',
