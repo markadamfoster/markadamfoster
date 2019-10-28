@@ -15,7 +15,7 @@ function HomePageContent({ posts }) {
     <Wrapper>
       <SectionTitle>Featured Projects</SectionTitle>
       <FeaturedProjectsList />
-      <SectionTitle marginTop={true}>Recent Articles</SectionTitle>
+      <SectionTitle marginTop={true}>Articles</SectionTitle>
       <PostsList posts={posts} />
     </Wrapper>
   )

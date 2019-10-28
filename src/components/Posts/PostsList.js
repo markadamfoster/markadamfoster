@@ -27,9 +27,7 @@ export default PostsList
 
 const List = styled.ol`
   display: block;
-  width: 700px;
-  max-width: 90%;
-  margin: 40px auto;
+  margin: 40px 0;
   padding: 0;
   list-style-type: none;
 `
