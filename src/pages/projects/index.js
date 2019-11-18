@@ -3,7 +3,7 @@ import { graphql } from 'gatsby'
 import Helmet from 'react-helmet'
 import get from 'lodash/get'
 
-import SubPageLayout from 'src/layouts/SubPageLayout'
+import DefaultLayout from 'src/layouts/DefaultLayout'
 import ProjectsList from 'src/components/Projects/ProjectsList/ProjectsList'
 
 class Projects extends Component {
@@ -17,7 +17,7 @@ class Projects extends Component {
     console.log('siteTitle:', siteTitle)
 
     return (
-      <SubPageLayout>
+      <DefaultLayout>
         <Helmet
           htmlAttributes={{ lang: 'en' }}
           meta={[{ name: 'description', content: siteDescription }]}
@@ -25,7 +25,7 @@ class Projects extends Component {
         />
         <h1>Projects</h1>
         <ProjectsList />
-      </SubPageLayout>
+      </DefaultLayout>
     )
   }
 }

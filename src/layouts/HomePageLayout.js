@@ -2,7 +2,6 @@ import React, { Component } from 'react'
 import { PropTypes } from 'prop-types'
 import styled from 'styled-components'
 
-import HeaderLarge from 'src/components/Headers/HeaderLarge'
 import Footer from 'src/components/Footer'
 import { colors } from 'src/Constants'
 
@@ -19,7 +18,6 @@ class MainLayout extends Component {
 
     return (
       <Wrapper>
-        <HeaderLarge />
         <Main>{children}</Main>
         <Footer />
       </Wrapper>

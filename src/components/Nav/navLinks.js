@@ -1,6 +1,6 @@
 export const navLinks = [
   {
-    label: 'Posts',
+    label: 'Articles',
     url: '/',
   },
   {
@@ -10,5 +10,9 @@ export const navLinks = [
   {
     label: 'About',
     url: '/about',
+  },
+  {
+    label: 'Contact',
+    url: '/contact',
   },
 ]

@@ -1,34 +1,37 @@
-import React, { Component } from 'react'
+import React from 'react'
 import Link from 'gatsby-link'
+import PropTypes from 'prop-types'
 import styled from 'styled-components'
 
 // assets
 import profilePic from 'src/assets/mark-foster.jpg'
 import { colors } from 'src/Constants'
 
-class MainPageHeader extends Component {
-  render() {
-    return (
-      <Wrapper>
-        <Content>
-          <Link to="/">
-            <Logo>
-              <Image>
-                <img src={profilePic} />
-              </Image>
-              <Text>
-                <Name>Mark Foster</Name>
-              </Text>
-            </Logo>
-          </Link>
-          <Link to="/">Home</Link>
-        </Content>
-      </Wrapper>
-    )
-  }
+const TopNavBar = ({ hideNav }) => {
+  return (
+    <Wrapper>
+      <Content>
+        <Link to="/">
+          <Logo>
+            <Image src={profilePic} />
+
+            <Text>
+              <Name>Mark Foster</Name>
+            </Text>
+          </Logo>
+        </Link>
+
+        {!hideNav && <Link to="/">Home</Link>}
+      </Content>
+    </Wrapper>
+  )
 }
 
-export default MainPageHeader
+TopNavBar.propTypes = {
+  hideNav: PropTypes.bool,
+}
+
+export default TopNavBar
 
 const Wrapper = styled.div`
   background-color: #f5f5f5;
@@ -36,6 +39,10 @@ const Wrapper = styled.div`
   padding: 14px 0;
   align-content: center;
   box-shadow: 2px 2px 2px rgba(0, 0, 0, 0.05);
+
+  @media (max-width: 500px) {
+    padding: 5px 0;
+  }
 `
 
 const Content = styled.div`
@@ -47,8 +54,8 @@ const Content = styled.div`
   margin: 0 auto;
 
   @media (max-width: 1040px) {
-    flex-direction: column;
     align-items: center;
+    justify-content: center;
   }
 `
 
@@ -62,16 +69,15 @@ const Logo = styled.div`
   }
 `
 
-const Image = styled.div`
-  img {
-    width: 80px;
-    height: 80px;
-    border-radius: 100%;
-    box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.2);
-  }
+const Image = styled.img`
+  width: 80px;
+  height: 80px;
+  border-radius: 100%;
+  box-shadow: 2px 2px 8px rgba(0, 0, 0, 0.2);
 
   @media (max-width: 500px) {
-    display: none;
+    width: 60px;
+    height: 60px;
   }
 `
 
@@ -83,10 +89,14 @@ const Text = styled.div`
 
   @media (max-width: 500px) {
     text-align: center;
-    margin-left: 0;
+    margin-left: 12px;
   }
 `
 
 const Name = styled.div`
   font-size: 42px;
+
+  @media (max-width: 500px) {
+    font-size: 32px;
+  }
 `

@@ -7,7 +7,7 @@ import styled from 'styled-components'
 
 import 'src/styles/prismjs-theme.css'
 
-import SubPageLayout from '../layouts/SubPageLayout'
+import DefaultLayout from '../layouts/DefaultLayout'
 import { colors } from 'src/Constants'
 import { EmailSignup } from '../components/EmailSignup'
 
@@ -27,7 +27,7 @@ class BlogPostTemplate extends React.Component {
     const { previous, next } = this.props.pageContext
 
     return (
-      <SubPageLayout location={this.props.location}>
+      <DefaultLayout location={this.props.location}>
         <Helmet
           htmlAttributes={{ lang: 'en' }}
           meta={[{ name: 'description', content: siteDescription }]}
@@ -69,7 +69,7 @@ class BlogPostTemplate extends React.Component {
             </li>
           </ul>
         </Post>
-      </SubPageLayout>
+      </DefaultLayout>
     )
   }
 }

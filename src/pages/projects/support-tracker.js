@@ -2,7 +2,7 @@ import React from 'react'
 import Helmet from 'react-helmet'
 
 // Components
-import SubPageLayout from 'src/layouts/SubPageLayout'
+import DefaultLayout from 'src/layouts/DefaultLayout'
 import Intro from 'src/components/Projects/ProjectSingle/IntroSection'
 import Content from 'src/components/Projects/ProjectSingle/Content'
 import Screenshots from 'src/components/Projects/ProjectSingle/ScreenshotSection'
@@ -20,7 +20,7 @@ const SupportTracker = () => {
   )
 
   return (
-    <SubPageLayout>
+    <DefaultLayout>
       <Helmet title="Project: Support Tracker" />
 
       <Intro project={project} />
@@ -74,7 +74,7 @@ const SupportTracker = () => {
           },
         ]}
       />
-    </SubPageLayout>
+    </DefaultLayout>
   )
 }
 

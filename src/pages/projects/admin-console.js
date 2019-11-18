@@ -2,7 +2,7 @@ import React from 'react'
 import Helmet from 'react-helmet'
 
 // Components
-import SubPageLayout from 'src/layouts/SubPageLayout'
+import DefaultLayout from 'src/layouts/DefaultLayout'
 import Intro from 'src/components/Projects/ProjectSingle/IntroSection'
 import Content from 'src/components/Projects/ProjectSingle/Content'
 import Screenshots from 'src/components/Projects/ProjectSingle/ScreenshotSection'
@@ -18,7 +18,7 @@ const AdminConsole = () => {
   const project = projectData.find(project => project.name === 'Admin Console')
 
   return (
-    <SubPageLayout>
+    <DefaultLayout>
       <Helmet title="Project: Admin Console" />
 
       <Intro project={project} />
@@ -61,7 +61,7 @@ const AdminConsole = () => {
           },
         ]}
       />
-    </SubPageLayout>
+    </DefaultLayout>
   )
 }
 

@@ -3,7 +3,7 @@ import { graphql } from 'gatsby'
 import get from 'lodash/get'
 import Helmet from 'react-helmet'
 
-import MainPageLayout from '../layouts/MainPageLayout'
+import HomePageLayout from '../layouts/HomePageLayout'
 import About from 'src/components/About/About'
 
 class AboutPage extends Component {
@@ -15,14 +15,14 @@ class AboutPage extends Component {
     )
 
     return (
-      <MainPageLayout>
+      <HomePageLayout>
         <Helmet
           htmlAttributes={{ lang: 'en' }}
           meta={[{ name: 'description', content: siteDescription }]}
           title={`About | ${siteTitle}`}
         />
         <About />
-      </MainPageLayout>
+      </HomePageLayout>
     )
   }
 }

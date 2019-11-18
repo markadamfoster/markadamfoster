@@ -2,7 +2,7 @@ import React from 'react'
 import Helmet from 'react-helmet'
 
 // Components
-import SubPageLayout from 'src/layouts/SubPageLayout'
+import DefaultLayout from 'src/layouts/DefaultLayout'
 import Intro from 'src/components/Projects/ProjectSingle/IntroSection'
 import Content from 'src/components/Projects/ProjectSingle/Content'
 import ProjectLinks from 'src/components/Projects/ProjectSingle/ProjectLinks'
@@ -20,7 +20,7 @@ const MyRentWillBuy = () => {
   )
 
   return (
-    <SubPageLayout>
+    <DefaultLayout>
       <Helmet title="Project: My Rent Will Buy" />
 
       <Intro project={project} />
@@ -72,7 +72,7 @@ const MyRentWillBuy = () => {
           },
         ]}
       />
-    </SubPageLayout>
+    </DefaultLayout>
   )
 }
 

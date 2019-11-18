@@ -2,6 +2,7 @@ import React from 'react'
 import PropTypes from 'prop-types'
 import styled from 'styled-components'
 
+import Hero from './Hero'
 import FeaturedProjectsList from './FeaturedProjects/FeaturedProjectsList'
 import PostsList from 'src/components/Posts/PostsList'
 import { colors } from 'src/Constants'
@@ -12,21 +13,33 @@ HomePageContent.propTypes = {
 
 function HomePageContent({ posts }) {
   return (
-    <Wrapper>
-      <SectionTitle>Featured Projects</SectionTitle>
-      <FeaturedProjectsList />
-      <SectionTitle marginTop={true}>Articles</SectionTitle>
-      <PostsList posts={posts} />
-    </Wrapper>
+    <>
+      <Hero />
+      <PageContent>
+        <SectionTitle marginTop={true}>Latest Articles</SectionTitle>
+        <PostsList posts={posts} />
+        <SectionTitle>Featured Projects</SectionTitle>
+        <FeaturedProjectsList />
+      </PageContent>
+    </>
   )
 }
 
 export default HomePageContent
 
-const Wrapper = styled.div`
+const PageContent = styled.div`
   width: 700px;
   max-width: 95%;
-  margin: 0 auto;
+  margin: 120px auto;
+
+  @media (max-width: 1200px) {
+    margin-top: 80px;
+  }
+
+  @media (max-width: 830px) {
+    /* margin-top: 80px; */
+    margin-top: 30px;
+  }
 `
 
 const SectionTitle = styled.h2`

@@ -3,7 +3,7 @@ import { graphql } from 'gatsby'
 import get from 'lodash/get'
 import Helmet from 'react-helmet'
 
-import MainPageLayout from '../layouts/MainPageLayout'
+import HomePageLayout from '../layouts/HomePageLayout'
 import HomePageContent from 'src/components/Home/HomePageContent'
 
 class HomePage extends Component {
@@ -16,14 +16,14 @@ class HomePage extends Component {
     const posts = get(this, 'props.data.allMarkdownRemark.edges')
 
     return (
-      <MainPageLayout>
+      <HomePageLayout>
         <Helmet
           htmlAttributes={{ lang: 'en' }}
           meta={[{ name: 'description', content: siteDescription }]}
           title={siteTitle}
         />
         <HomePageContent posts={posts} />
-      </MainPageLayout>
+      </HomePageLayout>
     )
   }
 }

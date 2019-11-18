@@ -13,7 +13,7 @@ class PostListEntry extends Component {
 
   render() {
     const { post } = this.props
-    const date = new Date(post.frontmatter.date)
+    // const date = new Date(post.frontmatter.date)
     return (
       <Wrapper>
         <Link to={post.fields.slug}>
@@ -21,7 +21,7 @@ class PostListEntry extends Component {
         </Link>
 
         <Info>
-          <PostDate>{date.toLocaleDateString('en-US')}</PostDate>
+          {/* <PostDate>{date.toLocaleDateString('en-US')}</PostDate> */}
           {/* <Tags tags={post.frontmatter.tags} /> */}
         </Info>
       </Wrapper>
@@ -34,7 +34,7 @@ export default PostListEntry
 const Wrapper = styled.li`
   padding-bottom: 20px;
   margin-bottom: 20px;
-  border-bottom: 2px solid #e7edef;
+  border-bottom: 2px solid #dddddd;
 
   :last-child {
     border-bottom: none;

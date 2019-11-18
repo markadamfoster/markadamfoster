@@ -1,33 +1,29 @@
-import React, { Component } from 'react'
+import React from 'react'
 import { PropTypes } from 'prop-types'
 import styled from 'styled-components'
 
-import HeaderCondensed from '../components/Headers/HeaderCondensed'
+import TopNavBar from '../components/Nav/TopNavBar'
 import Footer from 'src/components/Footer'
 import { colors } from 'src/Constants'
 
 import '../styles/normalize.css'
 import '../styles/style.css'
 
-class SubPageLayout extends Component {
-  static propTypes = {
-    children: PropTypes.node,
-  }
-
-  render() {
-    const { children } = this.props
-
-    return (
-      <Wrapper>
-        <HeaderCondensed />
-        <Main>{children}</Main>
-        <Footer />
-      </Wrapper>
-    )
-  }
+const DefaultLayout = ({ children }) => {
+  return (
+    <Wrapper>
+      <TopNavBar />
+      <Main>{children}</Main>
+      <Footer />
+    </Wrapper>
+  )
 }
 
-export default SubPageLayout
+DefaultLayout.propTypes = {
+  children: PropTypes.node,
+}
+
+export default DefaultLayout
 
 const Wrapper = styled.div`
   border-top: 8px solid ${colors.action};
