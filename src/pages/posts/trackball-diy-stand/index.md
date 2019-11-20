@@ -1,6 +1,7 @@
 ---
 templateKey: blog-post
 title: 'A DIY Trackball Stand That Fixed My Wrist Pain'
+icon: trackball
 date: 2019-03-19T06:00:00.000Z
 description: ''
 published: true

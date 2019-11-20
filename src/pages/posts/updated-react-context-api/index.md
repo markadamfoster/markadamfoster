@@ -1,6 +1,7 @@
 ---
 templateKey: blog-post
 title: Exploring React's Updated Context API
+icon: react
 date: 2018-05-05T06:00:00.000Z
 description: ''
 published: true

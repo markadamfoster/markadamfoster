@@ -4,6 +4,7 @@ title: 'Define Success Before You Start'
 date: 2018-11-22T06:00:00.000Z
 description: ''
 published: true
+icon: check
 tags:
   - Side Projects
 ---

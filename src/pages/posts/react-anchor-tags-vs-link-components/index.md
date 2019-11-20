@@ -4,6 +4,7 @@ title: 'Anchor tags vs Link components in React: Pick the right option by answer
 date: 2019-04-15T06:00:00.000Z
 description: ''
 published: true
+icon: react
 tags:
   - Coding
   - JavaScript

@@ -4,6 +4,7 @@ title: Notes from "How To Build a Solo SaaS Sales Machine"
 date: 2018-07-15T22:19:32.920Z
 description: ''
 published: true
+icon: chart
 tags:
   - Sales
   - Side Projects

@@ -1,6 +1,7 @@
 ---
 templateKey: blog-post
 title: React setState() in Depth
+icon: react
 date: 2018-07-30T22:19:32.920Z
 description: ''
 published: true
@@ -59,8 +60,8 @@ this.setState(state => {
 
 Let's pretend we have a value in state called `myValue`. We want to do two things:
 
-* set it to 10, and then
-* increment it by a value called `incrementBy`, which has been passed down as a prop.
+- set it to 10, and then
+- increment it by a value called `incrementBy`, which has been passed down as a prop.
 
 This is exactly where an updater function comes in handy:
 

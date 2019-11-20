@@ -4,6 +4,7 @@ title: StyleSheet.absoluteFill (and other React Native StyleSheet helpers)
 date: 2018-09-10T22:19:32.920Z
 description: ''
 published: true
+icon: react
 tags:
   - React Native
   - Coding

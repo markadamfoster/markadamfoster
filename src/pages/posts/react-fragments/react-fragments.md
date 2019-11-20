@@ -4,6 +4,7 @@ title: React Fragments in 2 Minutes
 date: 2018-05-07T22:19:32.920Z
 description: ''
 published: true
+icon: react
 tags:
   - Coding
   - React
