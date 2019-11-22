@@ -16,7 +16,7 @@ function HomePageContent({ posts }) {
     <>
       <Hero />
       <PageContent>
-        <SectionTitle marginTop={true}>Latest Articles</SectionTitle>
+        <SectionTitle>Latest Articles</SectionTitle>
         <PostsList posts={posts} />
         <SectionTitle>Featured Projects</SectionTitle>
         <FeaturedProjectsList />
@@ -30,21 +30,20 @@ export default HomePageContent
 const PageContent = styled.div`
   width: 700px;
   max-width: 95%;
-  margin: 120px auto;
+  margin: 80px auto;
 
   @media (max-width: 1200px) {
     margin-top: 80px;
   }
 
   @media (max-width: 830px) {
-    /* margin-top: 80px; */
     margin-top: 30px;
   }
 `
 
 const SectionTitle = styled.h2`
   margin: 0;
-  margin-top: ${props => (props.marginTop ? '50px' : '0')};
+  margin-top: 40px;
   display: inline-block;
   font-size: 42px;
   line-height: 20px;
