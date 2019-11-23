@@ -36,38 +36,40 @@ class BlogPostTemplate extends React.Component {
         <Post className="blog-post">
           <Title>{post.frontmatter.title}</Title>
           <Date>{post.frontmatter.date}</Date>
-          <div dangerouslySetInnerHTML={{ __html: post.html }} />
+          <PostContent>
+            <div dangerouslySetInnerHTML={{ __html: post.html }} />
 
-          <hr style={{ margin: '40px 0' }} />
+            <hr style={{ margin: '40px 0' }} />
 
-          <EmailSignup />
+            <EmailSignup />
 
-          <hr style={{ margin: '40px 0' }} />
+            <hr style={{ margin: '40px 0' }} />
 
-          <ul
-            style={{
-              display: 'flex',
-              flexWrap: 'wrap',
-              justifyContent: 'space-between',
-              listStyle: 'none',
-              padding: 0,
-            }}
-          >
-            <li>
-              {previous && (
-                <Link to={previous.fields.slug} rel="prev">
-                  ← {previous.frontmatter.title}
-                </Link>
-              )}
-            </li>
-            <li>
-              {next && (
-                <Link to={next.fields.slug} rel="next">
-                  {next.frontmatter.title} →
-                </Link>
-              )}
-            </li>
-          </ul>
+            <ul
+              style={{
+                display: 'flex',
+                flexWrap: 'wrap',
+                justifyContent: 'space-between',
+                listStyle: 'none',
+                padding: 0,
+              }}
+            >
+              <li>
+                {previous && (
+                  <Link to={previous.fields.slug} rel="prev">
+                    ← {previous.frontmatter.title}
+                  </Link>
+                )}
+              </li>
+              <li>
+                {next && (
+                  <Link to={next.fields.slug} rel="next">
+                    {next.frontmatter.title} →
+                  </Link>
+                )}
+              </li>
+            </ul>
+          </PostContent>
         </Post>
       </DefaultLayout>
     )
@@ -98,9 +100,8 @@ export const pageQuery = graphql`
 
 const Post = styled.div`
   font-size: 18px;
-  line-height: 1.5;
   width: 800px;
-  max-width: 90%;
+  max-width: 96%;
   margin: 0 auto;
   overflow-wrap: break-word;
   word-wrap: break-word;
@@ -112,6 +113,17 @@ const Post = styled.div`
   img {
     border: 1px solid #ddd;
     max-width: 100%;
+  }
+`
+
+const PostContent = styled.div`
+  width: 700px;
+  max-width: 90%;
+  margin: 0 auto;
+  line-height: 1.6;
+
+  li {
+    margin-bottom: 10px;
   }
 `
 
