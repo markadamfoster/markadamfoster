@@ -4,7 +4,7 @@ title: 'Maximizing Daily Code Study'
 date: 2019-11-23T06:00:00.000Z
 description: ''
 published: true
-icon: 'laptop'
+icon: 'coder'
 tags:
   - Coding
   - Reflection
