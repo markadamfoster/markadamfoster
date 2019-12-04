@@ -36,12 +36,12 @@ export default TopNavBar
 const Wrapper = styled.div`
   background-color: #f5f5f5;
   display: flex;
-  padding: 14px 0;
+  padding: 14px 5px;
   align-content: center;
   box-shadow: 2px 2px 2px rgba(0, 0, 0, 0.05);
 
   @media (max-width: 500px) {
-    padding: 5px 0;
+    padding: 5px;
   }
 `
 
@@ -52,11 +52,6 @@ const Content = styled.div`
   width: 1600px;
   max-width: 98%;
   margin: 0 auto;
-
-  @media (max-width: 1040px) {
-    align-items: center;
-    justify-content: center;
-  }
 `
 
 const Logo = styled.div`
