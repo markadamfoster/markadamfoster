@@ -4,6 +4,7 @@ title: Using AWS Lambda to Automatically Watermark Images on S3
 date: 2018-10-27T00:00:00.000Z
 description: ''
 published: true
+featured: true
 icon: aws
 tags:
   - Serverless

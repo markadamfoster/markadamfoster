@@ -2,17 +2,17 @@ import React from 'react'
 import Helmet from 'react-helmet'
 
 // Components
-import DefaultLayout from 'src/layouts/DefaultLayout'
-import Intro from 'src/components/Projects/ProjectSingle/IntroSection'
-import Content from 'src/components/Projects/ProjectSingle/Content'
-import ProjectLinks from 'src/components/Projects/ProjectSingle/ProjectLinks'
-import Screenshots from 'src/components/Projects/ProjectSingle/ScreenshotSection'
-import { projectData } from 'src/components/Projects/ProjectData'
+import DefaultLayout from 'layouts/DefaultLayout'
+import Intro from 'components/Projects/ProjectSingle/IntroSection'
+import Content from 'components/Projects/ProjectSingle/Content'
+import ProjectLinks from 'components/Projects/ProjectSingle/ProjectLinks'
+import Screenshots from 'components/Projects/ProjectSingle/ScreenshotSection'
+import { projectData } from 'components/Projects/ProjectData'
 
 // Screenshots
-import ssFront from 'src/assets/projects/Panoractives/pano-frontpage.jpg'
-import ssPhotography from 'src/assets/projects/Panoractives/pano-photography.jpg'
-import ssTour from 'src/assets/projects/Panoractives/pano-tour.jpg'
+import ssFront from 'assets/projects/Panoractives/pano-frontpage.jpg'
+import ssPhotography from 'assets/projects/Panoractives/pano-photography.jpg'
+import ssTour from 'assets/projects/Panoractives/pano-tour.jpg'
 
 const Panoractives = () => {
   const project = projectData.find(project => project.name === 'Panoractives')

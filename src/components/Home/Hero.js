@@ -2,9 +2,9 @@ import React from 'react'
 import styled from 'styled-components'
 
 // assets
-import profilePic from 'src/assets/mark-foster.jpg'
-import blob from 'src/assets/blob.png'
-import imac from 'src/assets/imac.png'
+import profilePic from 'assets/mark-foster.jpg'
+import blob from 'assets/blob.png'
+import imac from 'assets/imac.png'
 
 const Hero = () => {
   return (

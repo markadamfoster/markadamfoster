@@ -2,17 +2,17 @@ import React from 'react'
 import Helmet from 'react-helmet'
 
 // Components
-import DefaultLayout from 'src/layouts/DefaultLayout'
-import Intro from 'src/components/Projects/ProjectSingle/IntroSection'
-import Content from 'src/components/Projects/ProjectSingle/Content'
-import ProjectLinks from 'src/components/Projects/ProjectSingle/ProjectLinks'
-import Screenshots from 'src/components/Projects/ProjectSingle/ScreenshotSection'
-import { projectData } from 'src/components/Projects/ProjectData'
+import DefaultLayout from 'layouts/DefaultLayout'
+import Intro from 'components/Projects/ProjectSingle/IntroSection'
+import Content from 'components/Projects/ProjectSingle/Content'
+import ProjectLinks from 'components/Projects/ProjectSingle/ProjectLinks'
+import Screenshots from 'components/Projects/ProjectSingle/ScreenshotSection'
+import { projectData } from 'components/Projects/ProjectData'
 
 // Screenshots
-import ss01 from 'src/assets/projects/RentBuy/mrwb-front.jpg'
-import ss02 from 'src/assets/projects/RentBuy/mrwb-email-capture.jpg'
-import ss03 from 'src/assets/projects/RentBuy/mrwb-results.jpg'
+import ss01 from 'assets/projects/RentBuy/mrwb-front.jpg'
+import ss02 from 'assets/projects/RentBuy/mrwb-email-capture.jpg'
+import ss03 from 'assets/projects/RentBuy/mrwb-results.jpg'
 
 const MyRentWillBuy = () => {
   const project = projectData.find(

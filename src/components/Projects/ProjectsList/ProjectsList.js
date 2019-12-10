@@ -1,7 +1,7 @@
 import React, { Component } from 'react'
 import styled from 'styled-components'
 
-import { projectData } from 'src/components/Projects/ProjectData'
+import { projectData } from 'components/Projects/ProjectData'
 import PortfolioItem from './_ProjectListItem.js'
 
 class ProjectsList extends Component {

@@ -2,17 +2,17 @@ import React from 'react'
 import Helmet from 'react-helmet'
 
 // Components
-import DefaultLayout from 'src/layouts/DefaultLayout'
-import Intro from 'src/components/Projects/ProjectSingle/IntroSection'
-import Content from 'src/components/Projects/ProjectSingle/Content'
-import Screenshots from 'src/components/Projects/ProjectSingle/ScreenshotSection'
-import { projectData } from 'src/components/Projects/ProjectData'
+import DefaultLayout from 'layouts/DefaultLayout'
+import Intro from 'components/Projects/ProjectSingle/IntroSection'
+import Content from 'components/Projects/ProjectSingle/Content'
+import Screenshots from 'components/Projects/ProjectSingle/ScreenshotSection'
+import { projectData } from 'components/Projects/ProjectData'
 
 // Screenshots
-import childList from 'src/assets/projects/admin-console/ac-child-list.png'
-import childDetail from 'src/assets/projects/admin-console/ac-child-detail.png'
-import guardianDetail from 'src/assets/projects/admin-console/ac-guardian-detail.png'
-import dashboard from 'src/assets/projects/admin-console/ac-dashboard.png'
+import childList from 'assets/projects/admin-console/ac-child-list.png'
+import childDetail from 'assets/projects/admin-console/ac-child-detail.png'
+import guardianDetail from 'assets/projects/admin-console/ac-guardian-detail.png'
+import dashboard from 'assets/projects/admin-console/ac-dashboard.png'
 
 const AdminConsole = () => {
   const project = projectData.find(project => project.name === 'Admin Console')

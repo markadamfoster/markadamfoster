@@ -3,7 +3,7 @@ import PropTypes from 'prop-types'
 import styled from 'styled-components'
 import Link from 'gatsby-link'
 
-import { colors } from 'src/Constants'
+import { colors } from 'Constants'
 
 class FeaturedProjectListItem extends Component {
   static propTypes = {

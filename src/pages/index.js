@@ -4,7 +4,7 @@ import get from 'lodash/get'
 import Helmet from 'react-helmet'
 
 import HomePageLayout from '../layouts/HomePageLayout'
-import HomePageContent from 'src/components/Home/HomePageContent'
+import HomePageContent from 'components/Home/HomePageContent'
 
 class HomePage extends Component {
   render() {
@@ -13,7 +13,7 @@ class HomePage extends Component {
       this,
       'props.data.site.siteMetadata.description'
     )
-    const posts = get(this, 'props.data.allMarkdownRemark.edges')
+    const articles = get(this, 'props.data.allMarkdownRemark.edges')
 
     return (
       <HomePageLayout>
@@ -22,7 +22,7 @@ class HomePage extends Component {
           meta={[{ name: 'description', content: siteDescription }]}
           title={siteTitle}
         />
-        <HomePageContent posts={posts} />
+        <HomePageContent articles={articles} />
       </HomePageLayout>
     )
   }
@@ -49,6 +49,7 @@ export const pageQuery = graphql`
             date(formatString: "DD MMMM, YYYY")
             title
             published
+            featured
             tags
             icon
           }

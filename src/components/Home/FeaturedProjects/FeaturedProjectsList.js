@@ -2,7 +2,7 @@ import React from 'react'
 import styled from 'styled-components'
 import { Link } from 'gatsby'
 
-import { projectData } from 'src/components/Projects/ProjectData'
+import { projectData } from 'components/Projects/ProjectData'
 import PortfolioItem from './_FeaturedProjectListItem.js'
 
 function FeaturedProjectsList() {

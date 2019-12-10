@@ -2,17 +2,17 @@ import React from 'react'
 import Helmet from 'react-helmet'
 
 // Components
-import DefaultLayout from 'src/layouts/DefaultLayout'
-import Intro from 'src/components/Projects/ProjectSingle/IntroSection'
-import Content from 'src/components/Projects/ProjectSingle/Content'
-import Screenshots from 'src/components/Projects/ProjectSingle/ScreenshotSection'
-import { projectData } from 'src/components/Projects/ProjectData'
+import DefaultLayout from 'layouts/DefaultLayout'
+import Intro from 'components/Projects/ProjectSingle/IntroSection'
+import Content from 'components/Projects/ProjectSingle/Content'
+import Screenshots from 'components/Projects/ProjectSingle/ScreenshotSection'
+import { projectData } from 'components/Projects/ProjectData'
 
 // Screenshots
-import ss01 from 'src/assets/projects/SupportTracker/support_tracker_1.jpg'
-import ss02 from 'src/assets/projects/SupportTracker/support_tracker_2.jpg'
-import ss03 from 'src/assets/projects/SupportTracker/support_tracker_3.jpg'
-import ss04 from 'src/assets/projects/SupportTracker/support_tracker_4.jpg'
+import ss01 from 'assets/projects/SupportTracker/support_tracker_1.jpg'
+import ss02 from 'assets/projects/SupportTracker/support_tracker_2.jpg'
+import ss03 from 'assets/projects/SupportTracker/support_tracker_3.jpg'
+import ss04 from 'assets/projects/SupportTracker/support_tracker_4.jpg'
 
 const SupportTracker = () => {
   const project = projectData.find(

@@ -4,6 +4,7 @@ title: 'JS Basics: The JavaScript Event Loop'
 date: 2019-04-05T06:00:00.000Z
 description: ''
 published: true
+featured: true
 icon: 'js'
 tags:
   - Coding

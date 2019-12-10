@@ -3,40 +3,36 @@ import PropTypes from 'prop-types'
 import styled from 'styled-components'
 import Link from 'gatsby-link'
 
-import PostIcon from './_PostIcon'
-import { colors } from 'src/Constants'
+import ArticleIcon from './ArticleIcon'
+import { colors } from 'Constants'
 
-class PostListEntry extends Component {
+class ArticleListItem extends Component {
   static propTypes = {
-    post: PropTypes.object,
+    article: PropTypes.object,
   }
 
   render() {
-    const { post } = this.props
+    const { article } = this.props
 
     return (
       <Wrapper>
-        <PostIcon icon={post.frontmatter.icon} />
-        <Link to={post.fields.slug}>
-          <Title>{post.frontmatter.title}</Title>
+        <ArticleIcon icon={article.frontmatter.icon} />
+        <Link to={article.fields.slug}>
+          <Title>{article.frontmatter.title}</Title>
         </Link>
       </Wrapper>
     )
   }
 }
 
-export default PostListEntry
+export default ArticleListItem
 
 const Wrapper = styled.li`
   display: flex;
   align-items: center;
   padding-bottom: 20px;
   margin-bottom: 20px;
-  border-bottom: 2px solid #dddddd;
-
-  :last-child {
-    border-bottom: none;
-  }
+  border-bottom: 2px solid #ddd;
 `
 
 const Title = styled.h3`

@@ -5,10 +5,10 @@ import { Link, graphql } from 'gatsby'
 import get from 'lodash/get'
 import styled from 'styled-components'
 
-import 'src/styles/prismjs-theme.css'
+import 'styles/prismjs-theme.css'
 
 import DefaultLayout from '../layouts/DefaultLayout'
-import { colors } from 'src/Constants'
+import { colors } from 'Constants'
 import { EmailSignup } from '../components/EmailSignup'
 
 class BlogPostTemplate extends React.Component {

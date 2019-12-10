@@ -3,8 +3,8 @@ import { PropTypes } from 'prop-types'
 import styled from 'styled-components'
 
 import TopNavBar from '../components/Nav/TopNavBar'
-import Footer from 'src/components/Footer'
-import { colors } from 'src/Constants'
+import Footer from 'components/Footer'
+import { colors } from 'Constants'
 
 import '../styles/normalize.css'
 import '../styles/style.css'

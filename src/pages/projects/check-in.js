@@ -2,10 +2,10 @@ import React from 'react'
 import Helmet from 'react-helmet'
 
 // Components
-import DefaultLayout from 'src/layouts/DefaultLayout'
-import Intro from 'src/components/Projects/ProjectSingle/IntroSection'
-import Content from 'src/components/Projects/ProjectSingle/Content'
-import { projectData } from 'src/components/Projects/ProjectData'
+import DefaultLayout from 'layouts/DefaultLayout'
+import Intro from 'components/Projects/ProjectSingle/IntroSection'
+import Content from 'components/Projects/ProjectSingle/Content'
+import { projectData } from 'components/Projects/ProjectData'
 
 const CheckIn = () => {
   const project = projectData.find(project => project.name === 'Check-In')

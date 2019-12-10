@@ -4,20 +4,23 @@ import styled from 'styled-components'
 
 import Hero from './Hero'
 import FeaturedProjectsList from './FeaturedProjects/FeaturedProjectsList'
-import PostsList from 'src/components/Posts/PostsList'
-import { colors } from 'src/Constants'
+import RecentArticles from './RecentArticles'
+import FeaturedArticles from './FeaturedArticles'
+import { colors } from 'Constants'
 
 HomePageContent.propTypes = {
-  posts: PropTypes.array,
+  articles: PropTypes.array,
 }
 
-function HomePageContent({ posts }) {
+function HomePageContent({ articles }) {
   return (
     <>
       <Hero />
       <PageContent>
         <SectionTitle>Latest Articles</SectionTitle>
-        <PostsList posts={posts} />
+        <RecentArticles articles={articles} />
+        <SectionTitle>Featured Articles</SectionTitle>
+        <FeaturedArticles articles={articles} />
         <SectionTitle>Featured Projects</SectionTitle>
         <FeaturedProjectsList />
       </PageContent>

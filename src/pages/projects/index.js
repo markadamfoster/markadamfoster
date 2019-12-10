@@ -3,8 +3,8 @@ import { graphql } from 'gatsby'
 import Helmet from 'react-helmet'
 import get from 'lodash/get'
 
-import DefaultLayout from 'src/layouts/DefaultLayout'
-import ProjectsList from 'src/components/Projects/ProjectsList/ProjectsList'
+import DefaultLayout from 'layouts/DefaultLayout'
+import ProjectsList from 'components/Projects/ProjectsList/ProjectsList'
 
 class Projects extends Component {
   render() {

@@ -5,11 +5,12 @@ import get from 'lodash/get'
 import Helmet from 'react-helmet'
 
 import DefaultLayout from '../layouts/DefaultLayout'
-import Posts from 'src/components/Posts/Posts'
+import ArticlesPageContent from 'components/Articles/ArticlesPageContent'
 
-const PostsPage = ({ data }) => {
+const ArticlesPage = ({ data }) => {
   const siteTitle = get(data, 'site.siteMetadata.title')
   const siteDescription = get(data, 'site.siteMetadata.description')
+  const articles = get(data, 'allMarkdownRemark.edges')
 
   return (
     <DefaultLayout>
@@ -18,14 +19,14 @@ const PostsPage = ({ data }) => {
         meta={[{ name: 'description', content: siteDescription }]}
         title={`Posts | ${siteTitle}`}
       />
-      <Posts />
+      <ArticlesPageContent articles={articles} />
     </DefaultLayout>
   )
 }
 
-export default PostsPage
+export default ArticlesPage
 
-PostsPage.propTypes = {
+ArticlesPage.propTypes = {
   data: PropTypes.object,
 }
 
@@ -35,6 +36,23 @@ export const pageQuery = graphql`
       siteMetadata {
         title
         description
+      }
+    }
+    allMarkdownRemark(sort: { fields: [frontmatter___date], order: DESC }) {
+      edges {
+        node {
+          excerpt
+          fields {
+            slug
+          }
+          frontmatter {
+            date(formatString: "DD MMMM, YYYY")
+            title
+            published
+            tags
+            icon
+          }
+        }
       }
     }
   }

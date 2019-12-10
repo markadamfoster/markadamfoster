@@ -1,6 +1,6 @@
 import React from 'react'
 import styled from 'styled-components'
-import { colors } from 'src/Constants'
+import { colors } from 'Constants'
 
 const renderScreenshots = (width, data) => {
   return data.map((screenshot, index) => {

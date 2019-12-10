@@ -2,8 +2,8 @@ import React, { Component } from 'react'
 import { PropTypes } from 'prop-types'
 import styled from 'styled-components'
 
-import Footer from 'src/components/Footer'
-import { colors } from 'src/Constants'
+import Footer from 'components/Footer'
+import { colors } from 'Constants'
 
 import '../styles/normalize.css'
 import '../styles/style.css'

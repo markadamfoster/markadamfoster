@@ -3,7 +3,7 @@ import styled from 'styled-components'
 
 import MailIcon from 'react-feather/dist/icons/mail'
 import TwitterIcon from 'react-feather/dist/icons/twitter'
-import { colors } from 'src/Constants'
+import { colors } from 'Constants'
 
 class About extends Component {
   static propTypes = {}

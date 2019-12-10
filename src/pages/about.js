@@ -4,7 +4,7 @@ import get from 'lodash/get'
 import Helmet from 'react-helmet'
 
 import HomePageLayout from '../layouts/HomePageLayout'
-import About from 'src/components/About/About'
+import About from 'components/About/About'
 
 class AboutPage extends Component {
   render() {

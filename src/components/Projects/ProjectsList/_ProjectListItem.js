@@ -4,7 +4,7 @@ import styled from 'styled-components'
 import Link from 'gatsby-link'
 
 import TechBadges from '../ProjectsShared/TechBadges'
-import { colors } from 'src/Constants'
+import { colors } from 'Constants'
 
 class ProjectListItem extends Component {
   static propTypes = {

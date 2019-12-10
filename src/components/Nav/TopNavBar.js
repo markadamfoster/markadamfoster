@@ -3,11 +3,17 @@ import Link from 'gatsby-link'
 import PropTypes from 'prop-types'
 import styled from 'styled-components'
 
-// assets
-import profilePic from 'src/assets/mark-foster.jpg'
-import { colors } from 'src/Constants'
+import NavDesktop from './NavDesktop'
+import NavMobile from './NavMobile'
+import { useWindowSize } from 'utils/useWindowSize'
 
-const TopNavBar = ({ hideNav }) => {
+// assets
+import profilePic from 'assets/mark-foster.jpg'
+import { colors } from 'Constants'
+
+const TopNavBar = () => {
+  const windowSize = useWindowSize()
+
   return (
     <Wrapper>
       <Content>
@@ -21,14 +27,10 @@ const TopNavBar = ({ hideNav }) => {
           </Logo>
         </Link>
 
-        {!hideNav && <Link to="/">Home</Link>}
+        {windowSize.width >= 740 ? <NavDesktop /> : <NavMobile />}
       </Content>
     </Wrapper>
   )
-}
-
-TopNavBar.propTypes = {
-  hideNav: PropTypes.bool,
 }
 
 export default TopNavBar
@@ -95,3 +97,5 @@ const Name = styled.div`
     font-size: 32px;
   }
 `
+
+const Nav = styled.nav``
