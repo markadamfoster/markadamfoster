@@ -18,9 +18,9 @@ const NavMobile = () => {
     <>
       <Button onClick={toggleNav}>
         {navOpen ? (
-          <X color={colors.richBlack} />
+          <X color={colors.richBlack} size={24} />
         ) : (
-          <Menu color={colors.richBlack} />
+          <Menu color={colors.richBlack} size={24} />
         )}
       </Button>
 
