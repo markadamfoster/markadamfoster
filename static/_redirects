@@ -1,0 +1,18 @@
+# Redirects from what the browser requests to what we serve
+
+/posts/macbook-random-shutdown-fix                /macbook-random-shutdown-fix
+/posts/daily-code-study                           /daily-code-study
+/posts/create-react-app-environment-variables     /create-react-app-environment-variables
+/posts/styled-components-vscode-snippets          /styled-components-vscode-snippets
+/posts/vscode-settings-sync                       /vscode-settings-sync
+/posts/value-vs-reference                         /value-vs-reference
+/posts/react-anchor-tags-vs-link-components       /react-anchor-tags-vs-link-components
+/posts/javascript-event-loop                      /javascript-event-loop
+/posts/trackball-diy-stand                        /trackball-diy-stand
+/posts/defining-success                           /defining-success
+/posts/aws-lambda-watermarker                     /aws-lambda-watermarker
+/posts/react-native-stylesheet-helpers            /react-native-stylesheet-helpers
+/posts/react-setstate-in-depth                    /react-setstate-in-depth
+/posts/notes-from-solo-saas-sales-machine         /notes-from-solo-saas-sales-machine
+/posts/react-fragments/react-fragments            /react-fragments/react-fragments
+/posts/updated-react-context-api                  /updated-react-context-api
