@@ -1,6 +1,8 @@
 import React, { useState } from 'react'
 import styled from 'styled-components'
 import Link from 'gatsby-link'
+import { useSpring, animated } from 'react-spring'
+import { Menu, X } from 'react-feather'
 
 import { navLinks } from './navLinks'
 import { colors } from 'Constants'
@@ -10,12 +12,20 @@ const NavMobile = () => {
 
   const toggleNav = () => setNavOpen(!navOpen)
 
+  const props = useSpring({ opacity: navOpen ? 1 : 0 })
+
   return (
     <>
-      <Button onClick={toggleNav}>{navOpen ? '-' : '|'}</Button>
+      <Button onClick={toggleNav}>
+        {navOpen ? (
+          <X color={colors.richBlack} />
+        ) : (
+          <Menu color={colors.richBlack} />
+        )}
+      </Button>
 
       {navOpen && (
-        <Sidebar>
+        <Sidebar style={props}>
           <Nav>
             {navLinks.map(nav => {
               return (
@@ -34,13 +44,24 @@ const NavMobile = () => {
 export default NavMobile
 
 const Button = styled.button`
+  display: flex;
+  justify-content: center;
+  align-items: center;
   height: 44px;
   width: 44px;
-  border: 1px solid ${colors.action};
+  border: 2px solid ${colors.action};
+  border-radius: 5px;
+  background: white;
   z-index: 100;
+  /* outline: none; */
+  transition: all 200ms;
+
+  &:focus {
+    /* border: 2px solid ${colors.actionHover}; */
+  }
 `
 
-const Sidebar = styled.div`
+const Sidebar = styled(animated.div)`
   position: absolute;
   padding-top: 100px;
   padding-bottom: 20px;
