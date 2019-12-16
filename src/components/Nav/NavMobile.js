@@ -2,26 +2,20 @@ import React, { useState } from 'react'
 import styled from 'styled-components'
 import Link from 'gatsby-link'
 import { useSpring, animated } from 'react-spring'
-import { Menu, X } from 'react-feather'
 
+import MenuIcon from './MenuIcon'
 import { navLinks } from './navLinks'
 import { colors } from 'Constants'
 
 const NavMobile = () => {
   const [navOpen, setNavOpen] = useState(false)
-
   const toggleNav = () => setNavOpen(!navOpen)
-
   const props = useSpring({ opacity: navOpen ? 1 : 0 })
 
   return (
     <>
       <Button onClick={toggleNav}>
-        {navOpen ? (
-          <X color={colors.richBlack} size={24} />
-        ) : (
-          <Menu color={colors.richBlack} size={24} />
-        )}
+        <MenuIcon isOpen={navOpen} />
       </Button>
 
       {navOpen && (
@@ -53,12 +47,8 @@ const Button = styled.button`
   border-radius: 5px;
   background: white;
   z-index: 100;
-  /* outline: none; */
   transition: all 200ms;
-
-  &:focus {
-    /* border: 2px solid ${colors.actionHover}; */
-  }
+  font-size: 10px;
 `
 
 const Sidebar = styled(animated.div)`
@@ -93,3 +83,5 @@ const NavLink = styled(Link)`
     opacity: 1;
   }
 `
+
+const Icon = styled.img``
