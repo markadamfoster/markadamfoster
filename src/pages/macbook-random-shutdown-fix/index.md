@@ -16,7 +16,7 @@ If you have a 2013, 2014, or 2015 MacBook Pro (either the 13 inch or 15 inch ver
 **Step-by-step instructions to fix (originally found [here](https://outluch.wixsite.com/rmbp-crash)):**
 
 1. Reboot with CMD+R pressed
-2. Open Terminal and run `sudo csrutil disable` (you may or may not need to include “sudo”)
+2. Open Terminal and run `csrutil disable` (you may need to add `sudo` if that command fails)
 3. Reboot in normal mode
 4. (Only if running Catalina) Open Terminal and run `sudo mount -uw /`
 5. In Terminal, run
