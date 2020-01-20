@@ -80,7 +80,6 @@ const Image = styled.img`
 
 const Text = styled.div`
   margin-left: 20px;
-  font-family: 'Montserrat';
   font-weight: 900;
   white-space: nowrap;
 

@@ -24,7 +24,6 @@ export default NavDesktop
 const Nav = styled.nav``
 
 const NavLink = styled(Link)`
-  font-family: 'Montserrat', sans-serif;
   font-weight: 400;
   color: ${colors.action};
   font-size: 18px;

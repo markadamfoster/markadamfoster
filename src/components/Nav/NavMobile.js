@@ -71,7 +71,6 @@ const NavLink = styled(Link)`
   text-align: center;
   line-height: 44px;
   height: 44px;
-  font-family: 'Montserrat', sans-serif;
   font-weight: 700;
   color: white;
   opacity: 0.8;
