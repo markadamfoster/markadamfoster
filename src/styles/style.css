@@ -3,9 +3,19 @@
   --richBlack: #040404;
   --blue: #1d3461;
   --teal: #0c7489;
-  --action: #fe313d;
+  --action: #db5461;
   --actionHover: #f61b26;
   --offWhite: #eee;
+}
+
+html {
+  box-sizing: border-box;
+}
+
+*,
+*:before,
+*:after {
+  box-sizing: inherit;
 }
 
 body {
@@ -52,4 +62,15 @@ blockquote {
   border-left: 4px solid var(--teal);
   border-radius: 0 5px 5px 0;
   box-shadow: 2px 2px 8px rgba(0, 0, 0, 0.05);
+}
+
+/* Code syntax overrides */
+code,
+kbd,
+samp {
+  font-size: 0.8em;
+}
+
+:not(pre) > code[class*='language-'] {
+  padding: 0.1em 0.3em;
 }

@@ -33,12 +33,17 @@ const Wrapper = styled.li`
   padding-bottom: 20px;
   margin-bottom: 20px;
   border-bottom: 2px solid #ddd;
+
+  @media (max-width: 460px) {
+    padding-bottom: 10px;
+    margin-bottom: 10px;
+  }
 `
 
 const Title = styled.h3`
   font-family: Lato;
   margin: 5px 0;
-  font-size: 19px;
+  font-size: 18px;
   line-height: 32px;
   font-weight: 400;
   color: ${colors.textDark};
@@ -51,5 +56,9 @@ const Title = styled.h3`
   @media (max-width: 600px) {
     font-size: 17px;
     line-height: 23px;
+  }
+
+  @media (max-width: 460px) {
+    font-size: 16px;
   }
 `

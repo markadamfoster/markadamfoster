@@ -1,28 +1,20 @@
 import React from 'react'
 import styled from 'styled-components'
 
-// assets
-import profilePic from 'assets/mark-foster.jpg'
-import blob from 'assets/blob.png'
-import imac from 'assets/imac.png'
+import profilePic from 'assets/mark-foster.png'
 
 const Hero = () => {
   return (
     <Wrapper>
-      <Blob src={blob} />
       <Content>
-        <NameArea>
-          <Avatar src={profilePic} />
-          <Title>Mark Foster</Title>
-          <Description>
-            Software developer. Websites and apps built with React, React
-            Native, and WordPress.
-          </Description>
-        </NameArea>
-
-        <ImageArea>
-          <img src={imac} />
-        </ImageArea>
+        <Avatar src={profilePic} />
+        <Title>Hi, I&apos;m Mark Foster</Title>
+        <Description>
+          Web developer, designer, and maker based in Boise, Idaho.{' '}
+          <span role="img" aria-label="mountain">
+            ⛰
+          </span>
+        </Description>
       </Content>
     </Wrapper>
   )
@@ -31,133 +23,48 @@ const Hero = () => {
 export default Hero
 
 const Wrapper = styled.div`
-  position: relative;
-  width: 100%;
-  max-width: 100%;
-  overflow-y: hidden;
-`
-
-const Blob = styled.img`
-  position: absolute;
-  top: 0;
-  right: 0;
-  width: 52%;
-  height: 500px;
-  z-index: 1;
-
-  @media (max-width: 920px) {
-    height: 420px;
-  }
-
-  @media (max-width: 740px) {
-    height: 320px;
-  }
-
-  @media (max-width: 600px) {
-    display: none;
-  }
-`
-
-const Content = styled.div`
-  position: relative;
-  padding-top: 80px;
-  margin: 0 auto;
+  height: 70vh;
   display: flex;
-  width: 1200px;
-  max-width: 94%;
-  z-index: 10;
-
-  @media (max-width: 1050px) {
-    padding-top: 40px;
-  }
+  align-items: center;
 `
 
-const NameArea = styled.div`
-  flex: 1;
-  width: 50%;
-  margin-right: 20px;
-
-  @media (max-width: 600px) {
-    width: 100%;
-    margin: 0 auto;
-  }
-`
+const Content = styled.div``
 
 const Avatar = styled.img`
+  margin-left: -8px;
   height: 145px;
   width: 145px;
-  border-radius: 100%;
-  box-shadow: 2px 2px 20px rgba(0, 0, 0, 0.2);
 
-  @media (max-width: 930px) {
-    height: 140px;
-    width: 140px;
-  }
-
-  @media (max-width: 860px) {
+  @media (max-width: 460px) {
     height: 120px;
     width: 120px;
-  }
-
-  @media (max-width: 740px) {
-    height: 100px;
-    width: 100px;
   }
 `
 
 const Title = styled.h1`
   text-align: left;
-  margin: 15px 20px 10px 0;
-  font-size: 100px;
-  line-height: 1;
+  margin: 0;
+  font-size: 54px;
 
-  @media (max-width: 920px) {
-    font-size: 80px;
+  @media (max-width: 530px) {
+    font-size: 48px;
   }
 
-  @media (max-width: 740px) {
-    font-size: 46px;
+  @media (max-width: 460px) {
+    font-size: 32px;
   }
 `
 
 const Description = styled.h3`
-  font-family: Lato, --apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto,
-    Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
   font-weight: 400;
   font-size: 18px;
-  margin-right: 40px;
-  max-width: 400px;
+  margin: 0;
 
-  @media (max-width: 920px) {
-    font-size: 16px;
+  @media (max-width: 720px) {
+    max-width: 420px;
   }
 
-  @media (max-width: 750px) {
-    margin-right: 0;
-  }
-`
-
-const ImageArea = styled.div`
-  position: relative;
-  width: 50%;
-  flex: 1;
-  z-index: 10;
-  display: flex;
-  justify-content: center;
-  align-items: flex-end;
-
-  @media (max-width: 600px) {
-    display: none;
-  }
-
-  img {
-    max-height: 440px;
-    max-width: 100%;
-    display: block;
-    margin: 0 auto 10px;
-
-    @media (max-width: 600px) {
-      display: none;
-    }
+  @media (max-width: 460px) {
+    font-size: 15px;
   }
 `

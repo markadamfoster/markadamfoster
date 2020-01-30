@@ -27,10 +27,20 @@ const Img = styled.img`
   width: 32px;
   height: 32px;
   margin-right: 10px;
+
+  @media (max-width: 460px) {
+    height: 24px;
+    width: 24px;
+  }
 `
 
 const Spacer = styled.div`
   width: 32px;
   height: 32px;
   margin-right: 10px;
+
+  @media (max-width: 460px) {
+    height: 24px;
+    width: 24px;
+  }
 `

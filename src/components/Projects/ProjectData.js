@@ -26,13 +26,16 @@ Tags:
 export const projectData = [
   {
     name: 'Photo Invoice',
+    featured: true,
+    featuredBgColor: 'rgba(65, 196, 243, 0.15)',
     slug: 'photo-invoice',
     cover: photoInvoiceCover,
     subtitle: 'SaaS Web App: Upfront Invoicing for Real Estate Photographers',
     summary:
-      'The best way for photographers to invoice clients. A React-based web application with an ExpressJS & MongoDB backend, featuring integration with Stripe and Amazon S3.',
+      'Designed and developed the sales website (GatsbyJS), web application (React) and backend (Node/MongoDB) for a full-featured SaaS startup.',
+    // summary:
+    //   'The best way for photographers to invoice clients. A React-based web application with an ExpressJS & MongoDB backend, featuring integration with Stripe and Amazon S3.',
     badges: ['react', 'redux', 'styled-components'],
-    featured: true,
   },
   {
     name: 'Check-In',
@@ -45,6 +48,8 @@ export const projectData = [
   },
   {
     name: 'Admin Console',
+    featured: true,
+    featuredBgColor: 'rgba(135, 195, 138, 0.15)',
     slug: 'admin-console',
     cover: adminConsoleCover,
     subtitle: "Mobile App: Live Roster for Children's Check-In",
@@ -71,6 +76,8 @@ export const projectData = [
   },
   {
     name: 'Panoractives',
+    featured: true,
+    featuredBgColor: 'rgba(54, 168, 213, 0.15)',
     slug: 'panoractives',
     cover: panoractivesCover,
     subtitle: 'Website & Business: Real Estate Photography',

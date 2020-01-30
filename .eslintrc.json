@@ -1,7 +1,12 @@
 {
   "plugins": ["prettier"],
   "parser": "babel-eslint",
-  "extends": ["prettier", "eslint:recommended", "plugin:react/recommended"],
+  "extends": [
+    "prettier",
+    "eslint:recommended",
+    "plugin:react/recommended",
+    "plugin:jsx-a11y/recommended"
+  ],
   "env": {
     "browser": true,
     "node": true,

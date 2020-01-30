@@ -4,7 +4,7 @@ export const colors = {
   richBlack: '#040404',
   blue: '#1D3461',
   teal: '#0C7489',
-  action: '#FE313D',
+  action: '#DB5461',
   actionHover: '#b8434e',
   offWhite: '#f5f5f5',
 

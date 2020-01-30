@@ -31,4 +31,8 @@ const List = styled.ol`
   margin: 40px 0;
   padding: 0;
   list-style-type: none;
+
+  @media (max-width: 460px) {
+    margin: 10px 0;
+  }
 `

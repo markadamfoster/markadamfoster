@@ -28,7 +28,6 @@ class MainLayout extends Component {
 export default MainLayout
 
 const Wrapper = styled.div`
-  border-top: 8px solid ${colors.action};
   display: flex;
   flex-direction: column;
   min-height: 100vh;
