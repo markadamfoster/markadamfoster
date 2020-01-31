@@ -10,7 +10,7 @@ const Hero = () => {
         <Avatar src={profilePic} />
         <Title>Hi, I&apos;m Mark Foster</Title>
         <Description>
-          Web developer, designer, and maker based in Boise, Idaho.{' '}
+          Web developer and creator based in Boise, Idaho{' '}
           <span role="img" aria-label="mountain">
             ⛰
           </span>

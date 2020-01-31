@@ -15,10 +15,10 @@ function HomePageContent({ articles }) {
     <PageContent>
       <Hero />
 
-      <SectionTitle>The Work</SectionTitle>
+      <SectionTitle>Recent Projects</SectionTitle>
       <PortfolioSection />
 
-      <SectionTitle>Articles</SectionTitle>
+      <SectionTitle>Recent Articles</SectionTitle>
       <RecentArticles articles={articles} />
     </PageContent>
   )
@@ -33,7 +33,7 @@ const PageContent = styled.div`
 `
 
 const SectionTitle = styled.h2`
-  font-size: 48px;
+  font-size: 42px;
 
   @media (max-width: 530px) {
     font-size: 42px;
