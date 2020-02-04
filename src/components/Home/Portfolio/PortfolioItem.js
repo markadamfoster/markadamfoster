@@ -64,6 +64,7 @@ const Info = styled.div`
 
   @media (max-width: 600px) {
     width: 100%;
+    z-index: auto;
   }
 `
 

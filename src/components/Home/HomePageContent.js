@@ -26,11 +26,7 @@ function HomePageContent({ articles }) {
 
 export default HomePageContent
 
-const PageContent = styled.div`
-  margin: 0 auto;
-  width: 800px;
-  max-width: 94%;
-`
+const PageContent = styled.div``
 
 const SectionTitle = styled.h2`
   font-size: 42px;

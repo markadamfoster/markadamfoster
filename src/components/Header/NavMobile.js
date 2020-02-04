@@ -3,7 +3,7 @@ import styled from 'styled-components'
 import Link from 'gatsby-link'
 import { useSpring, animated } from 'react-spring'
 
-import MenuIcon from './MenuIcon'
+import { MenuIcon } from './MenuIcon'
 import { navLinks } from './navLinks'
 import { colors } from 'Constants'
 
@@ -19,17 +19,22 @@ const NavMobile = () => {
       </Button>
 
       {navOpen && (
-        <Sidebar style={props}>
+        <Background style={props}>
           <Nav>
             {navLinks.map(nav => {
               return (
-                <NavLink to={nav.url} key={nav.url}>
+                <NavLink
+                  to={nav.url}
+                  key={nav.url}
+                  activeStyle={{ opacity: 1 }}
+                  onClick={() => toggleNav()} // this closes the menu if user clicks on the item for the current page
+                >
                   {nav.label}
                 </NavLink>
               )
             })}
           </Nav>
-        </Sidebar>
+        </Background>
       )}
     </>
   )
@@ -43,44 +48,50 @@ const Button = styled.button`
   align-items: center;
   height: 44px;
   width: 44px;
-  border: 2px solid ${colors.action};
-  border-radius: 5px;
-  background: white;
+  border: none;
+  background: transparent;
   z-index: 100;
   transition: all 200ms;
   font-size: 10px;
 `
 
-const Sidebar = styled(animated.div)`
+const Background = styled(animated.div)`
   position: absolute;
-  padding-top: 100px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 80px;
   padding-bottom: 20px;
-  width: 200px;
+  width: 100%;
+  height: 100vh;
   right: 0;
   top: 0;
   right: 0;
-  background-color: ${colors.action};
-  z-index: 1;
-  box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.5);
+  bottom: 0;
+  opacity: 0.99;
+  background-color: ${colors.offWhiteBG};
+  box-shadow: inset 0 0 1px rgba(0, 0, 0, 0.04),
+    inset 0 0 5px rgba(0, 0, 0, 0.01), inset 0 5px 22px -8px rgba(0, 0, 0, 0.05);
+  z-index: 1000;
 `
 
-const Nav = styled.nav``
+const Nav = styled.nav`
+  margin-bottom: 100px;
+`
 
 const NavLink = styled(Link)`
-  display: block;
-  text-align: center;
-  line-height: 44px;
-  height: 44px;
+  display: flex;
+  justify-content: center;
+  padding: 15px 30px;
+  margin: 20px 0;
   font-weight: 700;
-  color: white;
-  opacity: 0.8;
-  font-size: 18px;
+  color: ${colors.textDark};
+  opacity: 0.5;
+  font-size: 16px;
   transition: opacity 250ms;
 
   :hover {
-    color: white;
+    color: ${colors.textDark};
     opacity: 1;
   }
 `
-
-const Icon = styled.img``

@@ -23,6 +23,9 @@ const Hero = () => {
 export default Hero
 
 const Wrapper = styled.div`
+  background-color: #f8fafc;
+  box-shadow: inset 0 0 1px rgba(0, 0, 0, 0.04),
+    inset 0 0 5px rgba(0, 0, 0, 0.01), inset 0 5px 22px -8px rgba(0, 0, 0, 0.05);
   height: 70vh;
   display: flex;
   align-items: center;
@@ -42,7 +45,7 @@ const Avatar = styled.img`
 `
 
 const Title = styled.h1`
-  text-align: left;
+  text-align: center;
   margin: 0;
   font-size: 54px;
 

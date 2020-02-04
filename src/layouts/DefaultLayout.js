@@ -2,9 +2,8 @@ import React from 'react'
 import { PropTypes } from 'prop-types'
 import styled from 'styled-components'
 
-import TopNavBar from '../components/Nav/TopNavBar'
+import Header from '../components/Header/Header'
 import Footer from 'components/Footer'
-import { colors } from 'Constants'
 
 import '../styles/normalize.css'
 import '../styles/style.css'
@@ -12,7 +11,7 @@ import '../styles/style.css'
 const DefaultLayout = ({ children }) => {
   return (
     <Wrapper>
-      <TopNavBar />
+      <Header />
       <Main>{children}</Main>
       <Footer />
     </Wrapper>
@@ -26,7 +25,6 @@ DefaultLayout.propTypes = {
 export default DefaultLayout
 
 const Wrapper = styled.div`
-  border-top: 8px solid ${colors.action};
   display: flex;
   flex-direction: column;
   min-height: 100vh;

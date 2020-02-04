@@ -7,35 +7,30 @@ import { colors } from 'Constants'
 
 const NavDesktop = () => {
   return (
-    <Nav>
+    <nav>
       {navLinks.map(nav => {
         return (
-          <NavLink to={nav.url} key={nav.url}>
+          <NavLink to={nav.url} key={nav.url} activeStyle={{ opacity: 1 }}>
             {nav.label}
           </NavLink>
         )
       })}
-    </Nav>
+    </nav>
   )
 }
 
 export default NavDesktop
 
-const Nav = styled.nav``
-
 const NavLink = styled(Link)`
-  font-weight: 400;
-  color: ${colors.action};
-  font-size: 18px;
-  margin-right: 50px;
-  transition: color 250ms;
+  color: ${colors.textDark};
+  font-size: 14px;
+  font-weight: 700;
+  opacity: 0.4;
+  padding: 10px 20px;
+  transition: opacity 150ms;
 
   :hover {
-    color: ${colors.actionHover};
-  }
-
-  @media (max-width: 960px) {
-    font-size: 15px;
-    margin-right: 20px;
+    opacity: 1;
+    color: ${colors.textDark};
   }
 `
