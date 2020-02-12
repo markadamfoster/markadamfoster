@@ -5,7 +5,7 @@ export const colors = {
   blue: '#1D3461',
   teal: '#0C7489',
   action: '#ff383c',
-  actionHover: '#b8434e',
+  actionHover: '#e41a1e',
   offWhite: '#f5f5f5',
 
   // Backgrounds

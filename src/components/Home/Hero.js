@@ -1,21 +1,18 @@
 import React from 'react'
 import styled from 'styled-components'
 
-import profilePic from 'assets/mark-foster.png'
+import { Container } from 'styles/Container'
 
 const Hero = () => {
   return (
     <Wrapper>
-      <Content>
-        <Avatar src={profilePic} />
-        <Title>Hi, I&apos;m Mark Foster</Title>
-        <Description>
-          Web developer and creator based in Boise, Idaho{' '}
-          <span role="img" aria-label="mountain">
-            ⛰
-          </span>
-        </Description>
-      </Content>
+      <Container>
+        <Title>
+          <span>Pixel-perfect web development, </span>
+          {/* <span>focused on your growth, </span> */}
+          <span>on time &amp; on budget.</span>
+        </Title>
+      </Container>
     </Wrapper>
   )
 }
@@ -26,48 +23,37 @@ const Wrapper = styled.div`
   background-color: #f8fafc;
   box-shadow: inset 0 0 1px rgba(0, 0, 0, 0.04),
     inset 0 0 5px rgba(0, 0, 0, 0.01), inset 0 5px 22px -8px rgba(0, 0, 0, 0.05);
-  height: 70vh;
   display: flex;
   align-items: center;
 `
 
-const Content = styled.div``
-
-const Avatar = styled.img`
-  margin-left: -8px;
-  height: 145px;
-  width: 145px;
-
-  @media (max-width: 460px) {
-    height: 120px;
-    width: 120px;
-  }
-`
-
 const Title = styled.h1`
+  font-size: 6rem;
+  line-height: 1.25em;
   text-align: center;
-  margin: 0;
-  font-size: 54px;
+  margin: 7vw 0;
 
-  @media (max-width: 530px) {
-    font-size: 48px;
+  span {
+    display: block;
+
+    @media (max-width: 540px) {
+      display: inline;
+    }
   }
 
-  @media (max-width: 460px) {
+  @media (max-width: 900px) {
+    font-size: 42px;
+  }
+
+  @media (max-width: 700px) {
     font-size: 32px;
   }
-`
 
-const Description = styled.h3`
-  font-weight: 400;
-  font-size: 18px;
-  margin: 0;
-
-  @media (max-width: 720px) {
-    max-width: 420px;
+  @media (max-width: 540px) {
+    font-size: 24px;
   }
 
-  @media (max-width: 460px) {
-    font-size: 15px;
-  }
+  /* @media (max-width: 460px) {
+    font-size: 32px;
+  } */
 `

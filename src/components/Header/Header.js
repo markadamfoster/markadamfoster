@@ -30,6 +30,7 @@ const Header = () => {
 export default Header
 
 const Wrapper = styled.header`
+  font-family: Lato, sans-serif;
   position: relative;
   width: 100%;
   height: 80px;

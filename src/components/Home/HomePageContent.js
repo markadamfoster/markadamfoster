@@ -2,6 +2,7 @@ import React from 'react'
 import PropTypes from 'prop-types'
 import styled from 'styled-components'
 
+import Bio from './Bio'
 import Hero from './Hero'
 import PortfolioSection from './Portfolio/PortfolioSection'
 import RecentArticles from './RecentArticles'
@@ -14,6 +15,8 @@ function HomePageContent({ articles }) {
   return (
     <PageContent>
       <Hero />
+
+      <Bio />
 
       <SectionTitle>Recent Projects</SectionTitle>
       <PortfolioSection />
