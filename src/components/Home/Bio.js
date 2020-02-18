@@ -58,6 +58,7 @@ const Wrapper = styled.div`
 const Aside = styled.aside`
   width: 34%;
   min-width: 130px;
+  max-width: 400px;
   margin: 0 20px 10px 0;
 
   @media (max-width: 700px) {

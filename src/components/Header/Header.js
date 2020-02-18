@@ -2,14 +2,14 @@ import React from 'react'
 import Link from 'gatsby-link'
 import styled from 'styled-components'
 
+import { headlineFont } from 'styles/Fonts'
+import { colors } from 'Constants'
 import { Container } from 'styles/Container'
 import NavDesktop from './NavDesktop'
 import NavMobile from './NavMobile'
 import { useWindowSize } from 'utils/useWindowSize'
 
-import { colors } from 'Constants'
-
-const Header = () => {
+function Header() {
   const windowSize = useWindowSize()
 
   return (
@@ -30,16 +30,13 @@ const Header = () => {
 export default Header
 
 const Wrapper = styled.header`
-  font-family: Lato, sans-serif;
+  ${headlineFont};
   position: relative;
   width: 100%;
   height: 80px;
   display: flex;
   align-items: center;
-  /* background-color: #fff; */
   box-shadow: 2px 2px 2px rgba(0, 0, 0, 0.05);
-  /* box-shadow: inset 0 0 1px rgba(0, 0, 0, 0.04),
-    inset 0 0 5px rgba(0, 0, 0, 0.01), inset 0 5px 22px -8px rgba(0, 0, 0, 0.05); */
   z-index: 100;
 
   @media (max-width: 500px) {

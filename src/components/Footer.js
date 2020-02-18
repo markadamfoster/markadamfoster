@@ -13,7 +13,7 @@ export default Footer
 const Wrapper = styled.footer`
   ${headlineFont};
   color: ${colors.textMedium};
-  font-weight: 600;
+  font-weight: 700;
   font-size: 13px;
   height: 80px;
   display: flex;

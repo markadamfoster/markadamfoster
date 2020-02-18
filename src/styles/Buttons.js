@@ -9,7 +9,7 @@ const buttonBaseStyles = css`
   display: inline-block;
   ${headlineFont}
   padding: 0 20px;
-  font-weight: 600;
+  font-weight: 700;
   height: 4rem;
   line-height: 4rem;
   text-align: center;

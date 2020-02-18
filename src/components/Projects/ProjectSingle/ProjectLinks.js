@@ -34,7 +34,7 @@ const Wrapper = styled.div`
 
 const ProjectLink = styled.a`
   text-decoration: none;
-  font-weight: 600;
+  font-weight: 700;
   color: white;
   width: 250px;
   min-width: 200px;
