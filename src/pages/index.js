@@ -46,7 +46,7 @@ export const pageQuery = graphql`
             slug
           }
           frontmatter {
-            date(formatString: "DD MMMM, YYYY")
+            date(formatString: "D MMM YYYY")
             title
             published
             featured

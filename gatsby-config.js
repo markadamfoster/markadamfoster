@@ -52,12 +52,7 @@ module.exports = {
     {
       resolve: `gatsby-plugin-google-fonts`,
       options: {
-        fonts: [
-          `Lato: 400,700,900`,
-          `Lora: 400, 700`,
-          `Merriweather: 400, 700`,
-          `Noto Serif JP: 400, 700`,
-        ],
+        fonts: [`Lato: 400,700,900`, `Noto Serif: 400,700,900`],
       },
     },
     `gatsby-plugin-feed`,

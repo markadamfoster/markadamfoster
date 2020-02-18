@@ -1,20 +1,25 @@
-import React, { Component } from 'react'
+import React from 'react'
 import styled from 'styled-components'
 
-class Footer extends Component {
-  static propTypes = {}
+import { colors } from 'Constants'
+import { headlineFont } from 'styles/Fonts'
 
-  render() {
-    return <Wrapper>© {new Date().getFullYear()} Mark Foster</Wrapper>
-  }
+function Footer() {
+  return <Wrapper>© {new Date().getFullYear()} Mark Foster</Wrapper>
 }
 
 export default Footer
 
 const Wrapper = styled.footer`
+  ${headlineFont};
+  color: ${colors.textMedium};
+  font-weight: 600;
+  font-size: 13px;
   height: 80px;
-  border-top: 2px solid #dbe7ec;
   display: flex;
   justify-content: center;
   align-items: center;
+  background-color: ${colors.offWhiteBG};
+  box-shadow: inset 0 0 1px rgba(0, 0, 0, 0.04),
+    inset 0 0 5px rgba(0, 0, 0, 0.01), inset 0 5px 22px -8px rgba(0, 0, 0, 0.05);
 `

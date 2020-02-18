@@ -2,7 +2,7 @@ import styled, { css } from 'styled-components'
 import Link from 'gatsby-link'
 
 import { colors } from 'Constants'
-import { headlineFont } from './FontFamily'
+import { headlineFont } from './Fonts'
 
 const buttonBaseStyles = css`
   font-size: 14px;
@@ -12,6 +12,7 @@ const buttonBaseStyles = css`
   font-weight: 600;
   height: 4rem;
   line-height: 4rem;
+  text-align: center;
   border: none;
   border-radius: 0.6rem;
   cursor: pointer;
@@ -40,22 +41,44 @@ const outlineStyles = css`
   }
 `
 
-export const PrimaryLinkButton = styled(Link)`
-  ${buttonBaseStyles}
-  ${primaryStyles}
-`
+/* ########################
+Primary Buttons
+######################## */
 
 export const PrimaryButton = styled.button`
   ${buttonBaseStyles}
   ${primaryStyles}
 `
 
+/* for internal links */
+export const PrimaryLinkButton = styled(Link)`
+  ${buttonBaseStyles}
+  ${primaryStyles}
+`
+
+/* for external links */
+export const PrimaryExtLinkButton = styled.a`
+  ${buttonBaseStyles}
+  ${primaryStyles}
+`
+
+/* ########################
+Outline Buttons
+######################## */
+
+export const OutlineButton = styled.button`
+  ${buttonBaseStyles}
+  ${outlineStyles}
+`
+
+/* for internal links */
 export const OutlineLinkButton = styled(Link)`
   ${buttonBaseStyles}
   ${outlineStyles}
 `
 
-export const OutlineButton = styled.button`
+/* for external links */
+export const OutlineExtLinkButton = styled.a`
   ${buttonBaseStyles}
   ${outlineStyles}
 `

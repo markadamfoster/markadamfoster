@@ -3,7 +3,7 @@ import PropTypes from 'prop-types'
 import styled from 'styled-components'
 import Link from 'gatsby-link'
 
-import ArticleIcon from './ArticleIcon'
+import { headlineFont, bodyFont } from 'styles/Fonts'
 import { colors } from 'Constants'
 
 class ArticleListItem extends Component {
@@ -13,12 +13,19 @@ class ArticleListItem extends Component {
 
   render() {
     const { article } = this.props
+    const { excerpt } = article
+    const { slug } = article.fields
+    const { date, tags, title } = article.frontmatter
+
+    console.log('article:', article)
 
     return (
       <Wrapper>
-        <ArticleIcon icon={article.frontmatter.icon} />
-        <Link to={article.fields.slug}>
-          <Title>{article.frontmatter.title}</Title>
+        <Link to={slug}>
+          <Tags>{tags.join(', ')}</Tags>
+          <Title>{title}</Title>
+          <Summary>{excerpt}</Summary>
+          <Date>{date}</Date>
         </Link>
       </Wrapper>
     )
@@ -30,35 +37,53 @@ export default ArticleListItem
 const Wrapper = styled.li`
   display: flex;
   align-items: center;
-  padding-bottom: 20px;
-  margin-bottom: 20px;
-  border-bottom: 2px solid #ddd;
+  margin: 0 0 4vw;
+`
 
-  @media (max-width: 460px) {
-    padding-bottom: 10px;
-    margin-bottom: 10px;
+const Tags = styled.div`
+  ${headlineFont};
+  color: ${colors.action};
+  font-size: 1.4rem;
+
+  @media (max-width: 600px) {
+    font-size: 1.3rem;
   }
 `
 
 const Title = styled.h3`
-  font-family: Lato;
+  ${bodyFont};
+  font-size: 3rem;
+  line-height: 1.4em;
+  font-weight: 700;
   margin: 5px 0;
-  font-size: 18px;
-  line-height: 32px;
-  font-weight: 400;
   color: ${colors.textDark};
   transition: color 250ms;
 
-  &:hover {
-    color: ${colors.action};
-  }
-
   @media (max-width: 600px) {
-    font-size: 17px;
-    line-height: 23px;
+    font-size: 2.4rem;
   }
 
   @media (max-width: 460px) {
-    font-size: 16px;
+    font-size: 1.8rem;
+  }
+`
+
+const Summary = styled.div`
+  margin: 0.7vw 0;
+  color: ${colors.textDark};
+
+  @media (max-width: 600px) {
+    font-size: 1.5rem;
+  }
+`
+
+const Date = styled.div`
+  margin: 0.5vw 0;
+  ${headlineFont};
+  color: ${colors.textMedium};
+  font-size: 1.4rem;
+
+  @media (max-width: 600px) {
+    font-size: 1.3rem;
   }
 `

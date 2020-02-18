@@ -2,7 +2,6 @@
 templateKey: blog-post
 title: 'Goals That Actually Work'
 date: 2020-01-03T06:00:00.000Z
-description: ''
 published: true
 icon: 'check'
 tags:
