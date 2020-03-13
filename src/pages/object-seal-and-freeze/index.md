@@ -1,6 +1,6 @@
 ---
 templateKey: blog-post
-title: 'Object.freeze() and Object.seal()'
+title: 'Object.seal() and Object.freeze()'
 date: 2020-03-13T06:00:00.000Z
 description: ''
 published: true
