@@ -1,6 +1,5 @@
 import React from 'react'
 import styled from 'styled-components'
-import Link from 'gatsby-link'
 
 import bioImgSrc from 'assets/mark_foster_bio.jpg'
 import { PrimaryLinkButton } from 'styles/Buttons'
@@ -14,28 +13,33 @@ function Bio() {
 
       <Text>
         <p>
-          Hi, I&apos;m Mark!{' '}
           <span role="img" aria-label="hand waving">
             👋
-          </span>
+          </span>{' '}
+          Hi, I&apos;m Mark!
         </p>
         <p>
-          I&apos;m a software developer, designer, and digital strategist. I
-          partner with clients to help plan and build their next website, app,
-          or digital asset.
+          I&apos;m an energetic and constantly-learning web developer and
+          product creator.
         </p>
         <p>
-          Along with client work, I sharpen my skills by building and launching
-          indie products (my most recent is{' '}
-          <Link to="/projects/photo-invoice">Photo Invoice</Link>).
+          I started hacking on Angelfire and Geocities sites back in the day,
+          took a break in college to study psychology, and then wandered back
+          into the world of tech.
+        </p>
+        <p>
+          I work full time as a frontend engineer, study an hour a day, and
+          build indie products in the nights and weekends.
+        </p>
+        <p>
+          When I&apos;m not in front of a screen, I&apos;m with my family or
+          exporing the Idaho backcountry on a mountain bike or pair of skis.
         </p>
         <Divider />
         <p>
-          <strong>Looking to hire for your next website or app?</strong>
-        </p>
-        <p>
-          You can expect excellent communication, on-time delivery, and
-          rock&#8209;solid development that moves your business forward.
+          <strong>
+            Need help with a project? I&apos;d love to hear about it!
+          </strong>
         </p>
         <PrimaryLinkButton to="/contact">Contact Me</PrimaryLinkButton>
       </Text>

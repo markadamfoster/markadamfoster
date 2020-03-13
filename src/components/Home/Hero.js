@@ -8,7 +8,8 @@ const Hero = () => {
     <Wrapper>
       <Container>
         <Title>
-          Pixel-perfect development <span>for your next website or app.</span>
+          Web developer and software engineer specializing in JavaScript and
+          React.
         </Title>
       </Container>
     </Wrapper>
@@ -18,15 +19,12 @@ const Hero = () => {
 export default Hero
 
 const Wrapper = styled.div`
-  /* background-color: #f8fafc;
-  box-shadow: inset 0 0 1px rgba(0, 0, 0, 0.04),
-    inset 0 0 5px rgba(0, 0, 0, 0.01), inset 0 5px 22px -8px rgba(0, 0, 0, 0.05); */
   display: flex;
   align-items: center;
 `
 
 const Title = styled.h1`
-  font-size: 6rem;
+  font-size: 5.8rem;
   line-height: 1.25em;
   text-align: center;
   margin: 6vw 0 4vw;
