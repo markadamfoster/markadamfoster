@@ -10,6 +10,8 @@ tags:
   - JS Basics
 ---
 
+![Ice on lake](./frozen.jpg)
+
 The other day I saw Object.freeze() and Object.seal() on a list of common JavaScript interview topics, and took note as I’ve never really looked into them before.
 
 ## General background
