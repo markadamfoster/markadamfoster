@@ -33,7 +33,7 @@ function Bio() {
         </p>
         <p>
           When I&apos;m not in front of a screen, I&apos;m with my family or
-          exporing the Idaho backcountry on a mountain bike or pair of skis.
+          exploring the Idaho backcountry on a mountain bike or pair of skis.
         </p>
         <Divider />
         <p>
