@@ -32,7 +32,7 @@ RecentArticles.propTypes = {
 
 const Wrapper = styled.div`
   max-width: 720px;
-  margin: 0 auto;
+  /* margin: 0 auto; */
 `
 
 const List = styled.ol`

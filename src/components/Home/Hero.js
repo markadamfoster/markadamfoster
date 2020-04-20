@@ -7,10 +7,13 @@ const Hero = () => {
   return (
     <Wrapper>
       <Container>
-        <Title>
-          Web developer and software engineer specializing in JavaScript and
-          React.
-        </Title>
+        <Title>Hi, I&apos;m Mark.</Title>
+        <SubTitle>
+          <p>
+            I share my love of JavaScript and React with short, easy-to-digest
+            articles.
+          </p>
+        </SubTitle>
       </Container>
     </Wrapper>
   )
@@ -19,33 +22,17 @@ const Hero = () => {
 export default Hero
 
 const Wrapper = styled.div`
-  display: flex;
-  align-items: center;
+  padding: 4vh 0;
 `
 
 const Title = styled.h1`
-  font-size: 5.8rem;
+  margin: 0;
+  text-align: left;
+  font-size: 4rem;
   line-height: 1.25em;
-  text-align: center;
-  margin: 6vw 0 4vw;
+`
 
-  span {
-    display: block;
-
-    @media (max-width: 540px) {
-      display: inline;
-    }
-  }
-
-  @media (max-width: 900px) {
-    font-size: 42px;
-  }
-
-  @media (max-width: 700px) {
-    font-size: 32px;
-  }
-
-  @media (max-width: 540px) {
-    font-size: 24px;
-  }
+const SubTitle = styled.div`
+  font-weight: 400;
+  font-size: 2rem;
 `
