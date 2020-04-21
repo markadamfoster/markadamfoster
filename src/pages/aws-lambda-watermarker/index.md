@@ -11,6 +11,8 @@ tags:
   - Coding
 ---
 
+> ⚠️ Update on Apr 21, 2020 - Unfortunately, this code is no longer working. The watermarker function is based on the `gm` library, which only works out-of-the-box with Node 8.x and earlier, which is no longer supported on AWS Lambda. My plan is to update my forked version of `lambda-watermark` to use the `sharp` library instead of `gm`. I'll write an update once it's ready. I'm leaving the original post below for reference.
+
 Hello friends! The other day I solved an interesting problem in an interesting way, and wanted to document the process just in case it can help anyone else.
 
 ## The Problem
