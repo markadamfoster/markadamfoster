@@ -51,6 +51,8 @@ const Content = styled.div`
 `
 
 const Logo = styled.div`
+  display: flex;
+  align-items: center;
   font-size: 21px;
   font-weight: 900;
   text-transform: uppercase;
