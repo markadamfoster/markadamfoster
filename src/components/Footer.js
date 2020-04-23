@@ -2,7 +2,6 @@ import React from 'react'
 import styled from 'styled-components'
 
 import { colors } from 'Constants'
-import { headlineFont } from 'styles/Fonts'
 
 function Footer() {
   return <Wrapper>© {new Date().getFullYear()} Mark Foster</Wrapper>
@@ -11,7 +10,6 @@ function Footer() {
 export default Footer
 
 const Wrapper = styled.footer`
-  ${headlineFont};
   color: ${colors.textMedium};
   font-weight: 700;
   font-size: 13px;

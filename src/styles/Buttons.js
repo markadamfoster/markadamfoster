@@ -2,12 +2,10 @@ import styled, { css } from 'styled-components'
 import Link from 'gatsby-link'
 
 import { colors } from 'Constants'
-import { headlineFont } from './Fonts'
 
 const buttonBaseStyles = css`
   font-size: 14px;
   display: inline-block;
-  ${headlineFont}
   padding: 0 20px;
   font-weight: 700;
   height: 4rem;

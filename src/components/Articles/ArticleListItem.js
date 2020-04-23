@@ -3,7 +3,6 @@ import PropTypes from 'prop-types'
 import styled from 'styled-components'
 import Link from 'gatsby-link'
 
-import { headlineFont, bodyFont } from 'styles/Fonts'
 import { colors } from 'Constants'
 
 class ArticleListItem extends Component {
@@ -41,7 +40,6 @@ const Wrapper = styled.li`
 `
 
 const Tags = styled.div`
-  ${headlineFont};
   color: ${colors.action};
   font-size: 1.4rem;
 
@@ -51,8 +49,7 @@ const Tags = styled.div`
 `
 
 const Title = styled.h3`
-  ${bodyFont};
-  font-size: 3rem;
+  font-size: 2.3rem;
   line-height: 1.4em;
   font-weight: 700;
   margin: 5px 0;
@@ -79,7 +76,6 @@ const Summary = styled.div`
 
 const Date = styled.div`
   margin: 0.5vw 0;
-  ${headlineFont};
   color: ${colors.textMedium};
   font-size: 1.4rem;
 

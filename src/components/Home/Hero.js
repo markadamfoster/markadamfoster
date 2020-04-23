@@ -25,7 +25,7 @@ const Hero = () => {
 export default Hero
 
 const Wrapper = styled.div`
-  padding: 4vh 0;
+  padding: 12vh 0;
 `
 
 const Content = styled(Container)`

@@ -2,7 +2,6 @@ import React, { Component } from 'react'
 import PropTypes from 'prop-types'
 import styled from 'styled-components'
 
-import { headlineFont } from 'styles/Fonts'
 import { OutlineLinkButton } from 'styles/Buttons'
 
 class PortfolioItem extends Component {
@@ -73,7 +72,6 @@ const Info = styled.div`
 `
 
 const Title = styled.div`
-  ${headlineFont}
   font-size: 24px;
   font-weight: 900;
   margin-top: 5px;

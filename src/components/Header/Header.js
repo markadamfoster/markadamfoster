@@ -2,7 +2,6 @@ import React from 'react'
 import Link from 'gatsby-link'
 import styled from 'styled-components'
 
-import { headlineFont } from 'styles/Fonts'
 import { colors } from 'Constants'
 import { Container } from 'styles/Container'
 import NavDesktop from './NavDesktop'
@@ -30,7 +29,6 @@ function Header() {
 export default Header
 
 const Wrapper = styled.header`
-  ${headlineFont};
   position: relative;
   width: 100%;
   height: 80px;
