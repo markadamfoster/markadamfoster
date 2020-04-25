@@ -10,21 +10,20 @@ function ContactPageContent() {
       <h1>Contact</h1>
       <Content>
         <p>
-          I’m excited to hear about your project! To start the process, just
-          shoot me an email or message me on Twitter. I&apos;d love to hear
-          about your business and we&apos;ll explore if I&apos;m the right fit.
+          Don&apos;t hesitate to reach out! I&apos;m super friendly, and love
+          meeting new people.
         </p>
       </Content>
       <Buttons>
         <EmailButton
-          href="mailto:foster154@gmail.com?subject=Available for hire?"
+          href="mailto:foster154@gmail.com"
           target="_blank"
           rel="noopener noreferrer"
         >
           Email Me
         </EmailButton>
         <OutlineExtLinkButton
-          href="https://twitter.com/messages/compose?recipient_id=16048318&text=Hi%20Mark,%20are%20you%20currently%20available%20for%20hire?"
+          href="https://twitter.com/messages/compose?recipient_id=16048318"
           target="_blank"
           rel="noopener noreferrer"
         >
@@ -38,6 +37,7 @@ function ContactPageContent() {
 export default ContactPageContent
 
 const Content = styled.div`
+  text-align: center;
   max-width: 720px;
   margin: 4vw auto;
 `

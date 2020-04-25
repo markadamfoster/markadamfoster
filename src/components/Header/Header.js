@@ -34,7 +34,9 @@ const Wrapper = styled.header`
   height: 80px;
   display: flex;
   align-items: center;
-  box-shadow: 2px 2px 2px rgba(0, 0, 0, 0.05);
+  background-color: ${colors.offWhiteBG};
+  box-shadow: inset 0 0 1px rgba(0, 0, 0, 0.04),
+    inset 0 0 5px rgba(0, 0, 0, 0.01), inset 0 5px 22px -8px rgba(0, 0, 0, 0.05);
   z-index: 100;
 
   @media (max-width: 500px) {

@@ -50,6 +50,7 @@ export const pageQuery = graphql`
             title
             published
             featured
+            popular
             tags
             icon
           }

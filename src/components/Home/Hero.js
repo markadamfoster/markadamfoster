@@ -11,11 +11,26 @@ const Hero = () => {
         <Img src={profileImg} />
 
         <div>
-          <Title>Hi, I&apos;m Mark.</Title>
-          <SubTitle>
-            I share my love of JavaScript and React with short,
-            easy&#8209;to&#8209;digest articles.
-          </SubTitle>
+          <Title>
+            Hi, I&apos;m Mark{' '}
+            <span role="img" aria-label="waving hand">
+              👋
+            </span>
+          </Title>
+          <Bio>
+            <p>
+              I am a software developer specializing in JavaScript and React.
+            </p>
+            <p>
+              My current focus is pushing further into the depths of JavaScript
+              and ReactJS, and teaching what I learn along the way.
+            </p>
+            <p>
+              I also dabble in building indie products. My current muse is{' '}
+              <a href="https://www.photoinvoice.com">Photo Invoice</a>, an
+              invoicing platform for photographers.
+            </p>
+          </Bio>
         </div>
       </Content>
     </Wrapper>
@@ -25,14 +40,17 @@ const Hero = () => {
 export default Hero
 
 const Wrapper = styled.div`
-  padding: 12vh 0;
+  padding: 10vh 0 8vh;
+
+  @media (max-width: 540px) {
+    padding: 6vw 0;
+  }
 `
 
 const Content = styled(Container)`
   display: flex;
-  align-items: center;
 
-  @media (max-width: 500px) {
+  @media (max-width: 540px) {
     flex-direction: column;
   }
 `
@@ -40,11 +58,12 @@ const Content = styled(Container)`
 const Img = styled.img`
   height: 120px;
   width: 120px;
+  flex-shrink: 0;
   margin-right: 30px;
   border-radius: 100%;
   box-shadow: 2px 2px 15px rgba(0, 0, 0, 0.2);
 
-  @media (max-width: 500px) {
+  @media (max-width: 540px) {
     margin: 0;
   }
 `
@@ -52,25 +71,25 @@ const Img = styled.img`
 const Title = styled.h1`
   margin: 0;
   text-align: left;
-  font-size: 4rem;
+  font-size: 3rem;
   line-height: 1.25em;
 
-  @media (max-width: 500px) {
+  @media (max-width: 540px) {
     margin-top: 18px;
-    text-align: center;
   }
 `
 
-const SubTitle = styled.p`
+const Bio = styled.div`
   margin: 10px 0 0;
   font-weight: 400;
-  font-size: 2rem;
+  max-width: 550px;
+  line-height: 1.8;
 
   @media (max-width: 890px) {
     font-size: 1.8rem;
   }
 
-  @media (max-width: 500px) {
-    text-align: center;
+  @media (max-width: 540px) {
+    font-size: 1.6rem;
   }
 `

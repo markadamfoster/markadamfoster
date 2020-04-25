@@ -33,4 +33,8 @@ const NavLink = styled(Link)`
     opacity: 1;
     color: ${colors.textDark};
   }
+
+  @media (max-width: 620px) {
+    padding: 10px 15px;
+  }
 `

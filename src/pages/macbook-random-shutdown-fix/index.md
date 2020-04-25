@@ -4,6 +4,7 @@ title: 'Fixing My MacBook Pro Random Shutdown Issue'
 date: 2019-12-03T06:00:00.000Z
 description: ''
 published: true
+popular: true
 icon: 'laptop'
 tags:
   - Coding

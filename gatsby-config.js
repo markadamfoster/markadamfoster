@@ -52,7 +52,7 @@ module.exports = {
     {
       resolve: `gatsby-plugin-google-fonts`,
       options: {
-        fonts: [`Lato: 400,700,900`],
+        fonts: [`Inter: 200,400,700,900`],
       },
     },
     `gatsby-plugin-feed`,
