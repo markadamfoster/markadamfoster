@@ -23,6 +23,10 @@ const Wrapper = styled.li`
 
   a {
     color: ${colors.textDark};
+
+    &:hover {
+      color: ${colors.action};
+    }
   }
 
   @media (max-width: 540px) {

@@ -5,7 +5,7 @@ import styled from 'styled-components'
 import Articles from './Articles'
 import { colors } from 'Constants'
 import { Container } from 'styles/Container'
-import Hero from './Hero'
+import Bio from './Bio'
 
 HomePageContent.propTypes = {
   articles: PropTypes.array,
@@ -14,7 +14,7 @@ HomePageContent.propTypes = {
 function HomePageContent({ articles }) {
   return (
     <>
-      <Hero />
+      <Bio />
 
       <SectionTitle>
         <Container>Articles</Container>

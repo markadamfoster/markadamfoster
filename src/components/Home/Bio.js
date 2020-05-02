@@ -4,7 +4,7 @@ import styled from 'styled-components'
 import profileImg from 'assets/mark_foster.jpg'
 import { Container } from 'styles/Container'
 
-const Hero = () => {
+const Bio = () => {
   return (
     <Wrapper>
       <Content>
@@ -17,7 +17,7 @@ const Hero = () => {
               👋
             </span>
           </Title>
-          <Bio>
+          <Text>
             <p>
               I am a software developer specializing in JavaScript and React.
             </p>
@@ -26,18 +26,18 @@ const Hero = () => {
               and ReactJS, and teaching what I learn along the way.
             </p>
             <p>
-              I also dabble in building indie products. My current muse is{' '}
+              I also build indie products, including{' '}
               <a href="https://www.photoinvoice.com">Photo Invoice</a>, an
               invoicing platform for photographers.
             </p>
-          </Bio>
+          </Text>
         </div>
       </Content>
     </Wrapper>
   )
 }
 
-export default Hero
+export default Bio
 
 const Wrapper = styled.div`
   padding: 10vh 0 8vh;
@@ -79,7 +79,7 @@ const Title = styled.h1`
   }
 `
 
-const Bio = styled.div`
+const Text = styled.div`
   margin: 10px 0 0;
   font-weight: 400;
   max-width: 550px;
