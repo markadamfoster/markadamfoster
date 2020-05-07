@@ -1,5 +1,5 @@
 import React from 'react'
-import Helmet from 'react-helmet'
+import { Helmet } from 'react-helmet'
 
 // Components
 import DefaultLayout from 'layouts/DefaultLayout'
@@ -14,7 +14,7 @@ import ss01 from 'assets/projects/Brookside/brookside-front.jpg'
 
 const BrooksideDentistry = () => {
   const project = projectData.find(
-    project => project.name === 'Brookside Dentistry'
+    (project) => project.name === 'Brookside Dentistry'
   )
 
   return (

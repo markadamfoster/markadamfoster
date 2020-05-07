@@ -1,5 +1,5 @@
 import React from 'react'
-import Helmet from 'react-helmet'
+import { Helmet } from 'react-helmet'
 
 // Components
 import DefaultLayout from 'layouts/DefaultLayout'
@@ -9,7 +9,9 @@ import ProjectLinks from 'components/Projects/ProjectSingle/ProjectLinks'
 import { projectData } from 'components/Projects/ProjectData'
 
 const PhotoInvoice = () => {
-  const project = projectData.find(project => project.name === 'Photo Invoice')
+  const project = projectData.find(
+    (project) => project.name === 'Photo Invoice'
+  )
 
   return (
     <DefaultLayout>

@@ -1,5 +1,5 @@
 import React from 'react'
-import Helmet from 'react-helmet'
+import { Helmet } from 'react-helmet'
 
 // Components
 import DefaultLayout from 'layouts/DefaultLayout'
@@ -14,7 +14,9 @@ import ssFront from 'assets/projects/leap-charities/front-page.jpg'
 import ssBlog from 'assets/projects/leap-charities/blog.jpg'
 
 const LeapCharities = () => {
-  const project = projectData.find(project => project.slug === 'leap-charities')
+  const project = projectData.find(
+    (project) => project.slug === 'leap-charities'
+  )
 
   return (
     <DefaultLayout>

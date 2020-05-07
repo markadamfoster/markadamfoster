@@ -1,5 +1,5 @@
 import React from 'react'
-import Helmet from 'react-helmet'
+import { Helmet } from 'react-helmet'
 
 // Components
 import DefaultLayout from 'layouts/DefaultLayout'
@@ -15,7 +15,7 @@ import ssPhotography from 'assets/projects/Panoractives/pano-photography.jpg'
 import ssTour from 'assets/projects/Panoractives/pano-tour.jpg'
 
 const Panoractives = () => {
-  const project = projectData.find(project => project.name === 'Panoractives')
+  const project = projectData.find((project) => project.name === 'Panoractives')
 
   return (
     <DefaultLayout>

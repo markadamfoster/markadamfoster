@@ -1,7 +1,7 @@
 import React, { Component } from 'react'
 import { graphql } from 'gatsby'
 import get from 'lodash/get'
-import Helmet from 'react-helmet'
+import { Helmet } from 'react-helmet'
 
 import Layout from '../layouts/DefaultLayout'
 import About from 'components/About/About'

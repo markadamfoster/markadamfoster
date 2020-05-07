@@ -1,5 +1,5 @@
 import React from 'react'
-import Helmet from 'react-helmet'
+import { Helmet } from 'react-helmet'
 
 // Components
 import DefaultLayout from 'layouts/DefaultLayout'
@@ -16,7 +16,7 @@ import ss03 from 'assets/projects/RentBuy/mrwb-results.jpg'
 
 const MyRentWillBuy = () => {
   const project = projectData.find(
-    project => project.name === 'My Rent Will Buy'
+    (project) => project.name === 'My Rent Will Buy'
   )
 
   return (

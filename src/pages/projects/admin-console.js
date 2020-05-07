@@ -1,5 +1,5 @@
 import React from 'react'
-import Helmet from 'react-helmet'
+import { Helmet } from 'react-helmet'
 
 // Components
 import DefaultLayout from 'layouts/DefaultLayout'
@@ -15,7 +15,9 @@ import guardianDetail from 'assets/projects/admin-console/ac-guardian-detail.png
 import dashboard from 'assets/projects/admin-console/ac-dashboard.png'
 
 const AdminConsole = () => {
-  const project = projectData.find(project => project.name === 'Admin Console')
+  const project = projectData.find(
+    (project) => project.name === 'Admin Console'
+  )
 
   return (
     <DefaultLayout>

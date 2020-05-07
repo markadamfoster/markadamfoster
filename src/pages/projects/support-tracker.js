@@ -1,5 +1,5 @@
 import React from 'react'
-import Helmet from 'react-helmet'
+import { Helmet } from 'react-helmet'
 
 // Components
 import DefaultLayout from 'layouts/DefaultLayout'
@@ -16,7 +16,7 @@ import ss04 from 'assets/projects/SupportTracker/support_tracker_4.jpg'
 
 const SupportTracker = () => {
   const project = projectData.find(
-    project => project.name === 'Support Tracker'
+    (project) => project.name === 'Support Tracker'
   )
 
   return (

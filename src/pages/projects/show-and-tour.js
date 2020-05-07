@@ -1,5 +1,5 @@
 import React from 'react'
-import Helmet from 'react-helmet'
+import { Helmet } from 'react-helmet'
 
 // Components
 import DefaultLayout from 'layouts/DefaultLayout'
@@ -17,7 +17,9 @@ import ss04 from 'assets/projects/ShowAndTour/st-04.jpg'
 import ss05 from 'assets/projects/ShowAndTour/st-05.jpg'
 
 const ShowAndTour = () => {
-  const project = projectData.find(project => project.slug === 'show-and-tour')
+  const project = projectData.find(
+    (project) => project.slug === 'show-and-tour'
+  )
 
   return (
     <DefaultLayout>

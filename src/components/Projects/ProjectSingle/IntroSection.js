@@ -1,7 +1,6 @@
 import React, { Component } from 'react'
 import { PropTypes } from 'prop-types'
-import styled, { keyframes } from 'styled-components'
-import { fadeIn, bounceIn } from 'react-animations'
+import styled from 'styled-components'
 
 import TechBadges from '../ProjectsShared/TechBadges'
 
@@ -72,11 +71,7 @@ const TitleSmall = styled.span`
   }
 `
 
-const fadeInAnimation = keyframes`${fadeIn}`
-
-const FadeIn = styled.div`
-  animation: 500ms ${fadeInAnimation};
-`
+const FadeIn = styled.div``
 
 const Content = styled.div`
   display: flex;
@@ -112,11 +107,7 @@ const ColumnRight = styled.div`
   }
 `
 
-const bounceInAnimation = keyframes`${bounceIn}`
-
-const BounceIn = styled.div`
-  animation: 800ms ${bounceInAnimation};
-`
+const BounceIn = styled.div``
 
 const Summary = styled.div`
   font-size: 18px;
