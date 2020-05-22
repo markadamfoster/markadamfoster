@@ -1,6 +1,7 @@
 import React from 'react'
 import PropTypes from 'prop-types'
 import styled from 'styled-components'
+import { useStaticQuery, graphql } from 'gatsby'
 
 import { OutlineLinkButton } from 'styles/Buttons'
 import ArticleLink from './ArticleLink'
@@ -9,14 +10,34 @@ Articles.propTypes = {
   articles: PropTypes.array,
 }
 
-function Articles({ articles }) {
+function Articles() {
+  const data = useStaticQuery(graphql`
+    query ArticlesQuery {
+      allMdx(
+        sort: { fields: frontmatter___date, order: DESC }
+        filter: { frontmatter: { published: { eq: true } } }
+      ) {
+        edges {
+          node {
+            fields {
+              slug
+            }
+            frontmatter {
+              title
+              popular
+            }
+          }
+        }
+      }
+    }
+  `)
+
+  const articles = data.allMdx.edges
   const popularArticles = articles
-    .filter(post => post.node.frontmatter.popular)
+    .filter((post) => post.node.frontmatter.popular)
     .slice(0, 3)
 
-  const recentArticles = articles
-    .filter(post => post.node.frontmatter.published)
-    .slice(0, 5)
+  const recentArticles = articles.slice(0, 5)
 
   return (
     <Wrapper>

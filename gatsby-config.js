@@ -1,3 +1,5 @@
+// const path = require('path')
+
 module.exports = {
   siteMetadata: {
     title: 'Mark Foster',
@@ -8,22 +10,17 @@ module.exports = {
   },
   plugins: [
     {
-      resolve: `gatsby-source-filesystem`,
+      resolve: `gatsby-plugin-mdx`,
       options: {
-        path: `${__dirname}/src/pages`,
-        name: 'pages',
-      },
-    },
-    {
-      resolve: `gatsby-transformer-remark`,
-      options: {
-        plugins: [
+        defaultLayouts: {
+          default: require.resolve('./src/layouts/ArticleLayout.js'),
+        },
+        extensions: [`.mdx`, `.md`],
+        gatsbyRemarkPlugins: [
           {
             resolve: `gatsby-remark-images`,
             options: {
               maxWidth: 800,
-              linkImagesToOriginal: false,
-              quality: 90,
             },
           },
           {
@@ -32,12 +29,20 @@ module.exports = {
               wrapperStyle: `margin-bottom: 1.0725rem`,
             },
           },
-          'gatsby-remark-prismjs',
-          'gatsby-remark-copy-linked-files',
-          'gatsby-remark-smartypants',
+          { resolve: `gatsby-remark-prismjs` },
+          { resolve: `gatsby-remark-copy-linked-files` },
+          { resolve: `gatsby-remark-smartypants` },
         ],
       },
     },
+    {
+      resolve: `gatsby-source-filesystem`,
+      options: {
+        name: 'pages',
+        path: `${__dirname}/src/pages`,
+      },
+    },
+
     `gatsby-transformer-sharp`,
     `gatsby-plugin-resolve-src`,
     `gatsby-plugin-sharp`,
@@ -55,7 +60,6 @@ module.exports = {
         fonts: [`Inter: 200,400,700,900`],
       },
     },
-    `gatsby-plugin-feed`,
     {
       resolve: `gatsby-plugin-manifest`,
       options: {

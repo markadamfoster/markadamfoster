@@ -1,14 +1,47 @@
 import React from 'react'
 import PropTypes from 'prop-types'
 import styled from 'styled-components'
+import { useStaticQuery, graphql } from 'gatsby'
 
-import ArticlesList from './ArticlesList'
+import ArticleListItem from './ArticleListItem'
 
-const ArticlesPageContent = ({ articles }) => {
+function ArticlesPageContent() {
+  const data = useStaticQuery(graphql`
+    query ArticlesPageQuery {
+      allMdx(
+        sort: { fields: frontmatter___date, order: DESC }
+        filter: { frontmatter: { published: { eq: true } } }
+      ) {
+        edges {
+          node {
+            fields {
+              slug
+            }
+            frontmatter {
+              title
+              popular
+              tags
+            }
+            excerpt
+          }
+        }
+      }
+    }
+  `)
+
+  console.log('data:', data)
+
+  const articles = data.allMdx.edges
+
   return (
     <Wrapper>
       <Title>Articles</Title>
-      <ArticlesList articles={articles} />
+
+      <List>
+        {articles.map(({ node: article }) => {
+          return <ArticleListItem key={article.fields.slug} article={article} />
+        })}
+      </List>
     </Wrapper>
   )
 }
@@ -26,3 +59,10 @@ const Wrapper = styled.div`
 `
 
 const Title = styled.h1``
+
+const List = styled.ol`
+  display: block;
+  margin: 40px 0;
+  padding: 0;
+  list-style-type: none;
+`

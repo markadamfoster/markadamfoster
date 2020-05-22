@@ -1,34 +1,29 @@
-import React, { Component } from 'react'
+import React from 'react'
 import PropTypes from 'prop-types'
 import styled from 'styled-components'
 import Link from 'gatsby-link'
 
 import { colors } from 'Constants'
 
-class ArticleListItem extends Component {
-  static propTypes = {
-    article: PropTypes.object,
-  }
+ArticleListItem.propTypes = {
+  article: PropTypes.object,
+}
 
-  render() {
-    const { article } = this.props
-    const { excerpt } = article
-    const { slug } = article.fields
-    const { date, tags, title } = article.frontmatter
+function ArticleListItem({ article }) {
+  const { excerpt } = article
+  const { slug } = article.fields
+  const { date, tags, title } = article.frontmatter
 
-    console.log('article:', article)
-
-    return (
-      <Wrapper>
-        <Link to={slug}>
-          <Tags>{tags.join(', ')}</Tags>
-          <Title>{title}</Title>
-          <Summary>{excerpt}</Summary>
-          <Date>{date}</Date>
-        </Link>
-      </Wrapper>
-    )
-  }
+  return (
+    <Wrapper>
+      <Link to={slug}>
+        <Tags>{tags.join(', ')}</Tags>
+        <Title>{title}</Title>
+        <Summary>{excerpt}</Summary>
+        <Date>{date}</Date>
+      </Link>
+    </Wrapper>
+  )
 }
 
 export default ArticleListItem
