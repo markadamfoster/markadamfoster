@@ -1,92 +1,72 @@
 import React from 'react'
-import PropTypes from 'prop-types'
 import { Helmet } from 'react-helmet'
-import { Link, graphql, useStaticQuery } from 'gatsby'
+import { graphql } from 'gatsby'
+import { MDXRenderer } from 'gatsby-plugin-mdx'
 import styled from 'styled-components'
-
-import 'styles/prismjs-theme.css'
+import PropTypes from 'prop-types'
 
 import DefaultLayout from './DefaultLayout'
 import { colors } from 'Constants'
 import { EmailSignup } from '../components/EmailSignup'
 
+import 'styles/prismjs-theme.css'
+
 ArticleLayout.propTypes = {
-  // gatsby-node.js
   data: PropTypes.object,
-  pageContext: PropTypes.object,
-  // router
-  location: PropTypes.object,
 }
 
-function ArticleLayout(props) {
-  console.log('ArticleTemplate props:', props)
-
-  const data = useStaticQuery(graphql`
-    query ArticleLayoutQuery {
-      site {
-        siteMetadata {
-          title
-        }
-      }
-      allMdx(
-        sort: { fields: frontmatter___date, order: DESC }
-        filter: { frontmatter: { published: { eq: true } } }
-      ) {
-        edges {
-          node {
-            fields {
-              slug
-            }
-            frontmatter {
-              title
-              popular
-              tags
-            }
-            excerpt
-          }
-        }
-      }
-    }
-  `)
-
+export default function ArticleLayout({ data }) {
   console.log('data:', data)
-
+  const { excerpt, body } = data.mdx
+  const { title, date } = data.mdx.frontmatter
   const siteTitle = data.site.siteMetadata.title
-  const siteDescription = '(post excerpt missing)' // post.excerpt // TODO: Get the post excerpt!
-  console.log('siteDescription:', siteDescription)
-  const postTitle = props.pageContext.frontmatter.title
-  const postDate = props.pageContext.frontmatter.date
 
   return (
-    <DefaultLayout location={props.location}>
+    <DefaultLayout>
       <Helmet
         htmlAttributes={{ lang: 'en' }}
-        meta={[{ name: 'description', content: siteDescription }]}
-        title={`${postTitle} | ${siteTitle}`}
+        meta={[{ name: 'description', content: excerpt }]}
+        title={`${title} | ${siteTitle}`}
       />
+
       <Post className="blog-post">
-        <Title>{postTitle}</Title>
-        <Date>{postDate}</Date>
-        <PostContent>
-          {props.children}
+        <Title>{title}</Title>
+        <Date>{date}</Date>
 
-          <hr style={{ margin: '40px 0' }} />
+        <MDXRenderer>{body}</MDXRenderer>
 
-          <EmailSignup />
-
-          <hr style={{ margin: '40px 0' }} />
-        </PostContent>
+        <hr style={{ margin: '40px 0' }} />
+        <EmailSignup />
+        <hr style={{ margin: '40px 0' }} />
       </Post>
     </DefaultLayout>
   )
 }
 
-export default ArticleLayout
+export const pageQuery = graphql`
+  query BlogPostQuery($id: String) {
+    site {
+      siteMetadata {
+        title
+      }
+    }
+    mdx(id: { eq: $id }) {
+      id
+      body
+      excerpt
+      frontmatter {
+        title
+        date(formatString: "MMM D, YYYY")
+      }
+    }
+  }
+`
 
 const Post = styled.div`
   font-size: 18px;
-  width: 800px;
-  max-width: 96%;
+  line-height: 1.6;
+  width: 700px;
+  max-width: 94%;
   margin: 0 auto;
   overflow-wrap: break-word;
   word-wrap: break-word;
@@ -99,13 +79,6 @@ const Post = styled.div`
     border: 1px solid #ddd;
     max-width: 100%;
   }
-`
-
-const PostContent = styled.div`
-  width: 700px;
-  max-width: 90%;
-  margin: 0 auto;
-  line-height: 1.6;
 
   li {
     margin-bottom: 10px;
