@@ -4,7 +4,7 @@ import { colors } from 'Constants'
 
 export function EmailSignup() {
   return (
-    <div id="mc_embed_signup">
+    <Wrapper id="mc_embed_signup">
       <Text>
         Want more like this? Sign up to get one article delivered weekly by
         email.
@@ -41,16 +41,23 @@ export function EmailSignup() {
 
         <input
           type="submit"
-          defaultValue="Subscribe"
           value="Sign Up"
           name="subscribe"
           id="mc-embedded-subscribe"
           className="button"
         />
       </Form>
-    </div>
+    </Wrapper>
   )
 }
+
+const Wrapper = styled.div`
+  padding: 30px;
+  border-radius: 10px;
+  box-shadow: 0px 2px 10px rgba(0, 0, 0, 0.15);
+  background: ${colors.offWhiteBG};
+  margin: 40px auto;
+`
 
 const Text = styled.div`
   text-align: center;

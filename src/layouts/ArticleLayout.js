@@ -1,25 +1,27 @@
 import React from 'react'
+import { graphql, Link } from 'gatsby'
 import { Helmet } from 'react-helmet'
-import { graphql } from 'gatsby'
 import { MDXRenderer } from 'gatsby-plugin-mdx'
-import styled from 'styled-components'
 import PropTypes from 'prop-types'
+import styled from 'styled-components'
 
-import DefaultLayout from './DefaultLayout'
 import { colors } from 'Constants'
+import DefaultLayout from './DefaultLayout'
 import { EmailSignup } from '../components/EmailSignup'
 
 import 'styles/prismjs-theme.css'
 
 ArticleLayout.propTypes = {
-  data: PropTypes.object,
+  data: PropTypes.object.isRequired,
+  pageContext: PropTypes.object.isRequired,
 }
 
-export default function ArticleLayout({ data }) {
-  console.log('data:', data)
+export default function ArticleLayout(props) {
+  const { data, pageContext } = props
   const { excerpt, body } = data.mdx
   const { title, date } = data.mdx.frontmatter
   const siteTitle = data.site.siteMetadata.title
+  const { previous, next } = pageContext
 
   return (
     <DefaultLayout>
@@ -35,9 +37,24 @@ export default function ArticleLayout({ data }) {
 
         <MDXRenderer>{body}</MDXRenderer>
 
-        <hr style={{ margin: '40px 0' }} />
         <EmailSignup />
-        <hr style={{ margin: '40px 0' }} />
+
+        <PrevNext>
+          <li>
+            {previous && (
+              <Link to={previous.fields.slug} rel="prev">
+                ← {previous.frontmatter.title}
+              </Link>
+            )}
+          </li>
+          <li>
+            {next && (
+              <Link to={next.fields.slug} rel="next">
+                {next.frontmatter.title} →
+              </Link>
+            )}
+          </li>
+        </PrevNext>
       </Post>
     </DefaultLayout>
   )
@@ -110,4 +127,14 @@ const Date = styled.div`
   @media (max-width: 600px) {
     margin-bottom: 20px;
   }
+`
+
+const PrevNext = styled.ul`
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  list-style: none;
+  padding: 0;
+
+  font-size: 15px;
 `

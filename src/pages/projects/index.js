@@ -14,8 +14,6 @@ class Projects extends Component {
       'props.data.site.siteMetadata.description'
     )
 
-    console.log('siteTitle:', siteTitle)
-
     return (
       <DefaultLayout>
         <Helmet

@@ -29,8 +29,6 @@ function ArticlesPageContent() {
     }
   `)
 
-  console.log('data:', data)
-
   const articles = data.allMdx.edges
 
   return (
