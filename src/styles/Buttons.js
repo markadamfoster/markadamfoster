@@ -8,11 +8,11 @@ const buttonBaseStyles = css`
   display: inline-block;
   padding: 0 20px;
   font-weight: 700;
-  height: 4rem;
-  line-height: 4rem;
+  height: 2.8rem;
+  line-height: 2.8rem;
   text-align: center;
   border: none;
-  border-radius: 0.6rem;
+  border-radius: 6px;
   cursor: pointer;
 `
 

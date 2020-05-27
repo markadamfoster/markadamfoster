@@ -33,7 +33,7 @@ function ArticlesPageContent() {
 
   return (
     <Wrapper>
-      <Title>Articles</Title>
+      <h1>Articles</h1>
 
       <List>
         {articles.map(({ node: article }) => {
@@ -55,8 +55,6 @@ const Wrapper = styled.div`
   padding: 0 20px;
   margin: 0 auto;
 `
-
-const Title = styled.h1``
 
 const List = styled.ol`
   display: block;

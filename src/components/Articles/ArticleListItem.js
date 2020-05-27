@@ -31,20 +31,24 @@ export default ArticleListItem
 const Wrapper = styled.li`
   display: flex;
   align-items: center;
-  margin: 0 0 4vw;
+  margin-bottom: 50px;
+
+  @media (max-width: 600px) {
+    margin-bottom: 30px;
+  }
 `
 
 const Tags = styled.div`
   color: ${colors.action};
-  font-size: 1.4rem;
+  font-size: 0.8rem;
 
   @media (max-width: 600px) {
-    font-size: 1.3rem;
+    font-size: 0.75rem;
   }
 `
 
 const Title = styled.h3`
-  font-size: 2.3rem;
+  font-size: 1.4rem;
   line-height: 1.4em;
   font-weight: 700;
   margin: 5px 0;
@@ -52,20 +56,21 @@ const Title = styled.h3`
   transition: color 250ms;
 
   @media (max-width: 600px) {
-    font-size: 2.4rem;
+    font-size: 1.2rem;
   }
 
   @media (max-width: 460px) {
-    font-size: 1.8rem;
+    font-size: 1rem;
   }
 `
 
 const Summary = styled.div`
-  margin: 0.7vw 0;
+  margin: 10px 0;
   color: ${colors.textDark};
 
   @media (max-width: 600px) {
-    font-size: 1.5rem;
+    margin: 6px 0;
+    font-size: 0.9rem;
   }
 `
 

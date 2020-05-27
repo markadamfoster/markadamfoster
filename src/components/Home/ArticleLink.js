@@ -12,24 +12,20 @@ ArticleLink.propTypes = {
 
 export default function ArticleLink({ slug, title }) {
   return (
-    <Wrapper>
-      <Link to={slug}>{title}</Link>
+    <Wrapper className="mb-4">
+      <Link to={slug} className="text-base lg:text-lg">
+        {title}
+      </Link>
     </Wrapper>
   )
 }
 
 const Wrapper = styled.li`
-  margin-bottom: 16px;
-
   a {
     color: ${colors.textDark};
 
     &:hover {
       color: ${colors.action};
     }
-  }
-
-  @media (max-width: 540px) {
-    font-size: 1.6rem;
   }
 `

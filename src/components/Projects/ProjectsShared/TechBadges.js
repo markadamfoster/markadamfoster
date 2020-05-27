@@ -21,7 +21,7 @@ import webpackIcon from 'assets/projects/badges/webpack.png'
 import wordpressIcon from 'assets/projects/badges/wordpress.png'
 
 const renderBadges = ({ badges, size }) => {
-  return badges.map(badge => {
+  return badges.map((badge) => {
     switch (badge) {
       case 'bootstrap':
         return (
@@ -177,7 +177,10 @@ class TechBadges extends Component {
 export default TechBadges
 
 const Wrapper = styled.div`
-  text-align: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 10px;
 `
 
 const Badge = styled.img`

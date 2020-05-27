@@ -75,6 +75,7 @@ const Wrapper = styled.div`
 
   h3 {
     margin-top: 2.6vw;
+    font-size: 1.25rem;
   }
 `
 

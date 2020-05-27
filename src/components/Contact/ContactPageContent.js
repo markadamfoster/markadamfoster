@@ -39,7 +39,7 @@ export default ContactPageContent
 const Content = styled.div`
   text-align: center;
   max-width: 720px;
-  margin: 4vw auto;
+  margin: 50px auto;
 `
 
 const Buttons = styled.div`

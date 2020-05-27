@@ -5,6 +5,7 @@ import { MDXRenderer } from 'gatsby-plugin-mdx'
 import PropTypes from 'prop-types'
 import styled from 'styled-components'
 
+import { PostContent } from 'Components/Shared/PostContent'
 import { colors } from 'Constants'
 import DefaultLayout from './DefaultLayout'
 import { EmailSignup } from '../components/EmailSignup'
@@ -31,31 +32,33 @@ export default function ArticleLayout(props) {
         title={`${title} | ${siteTitle}`}
       />
 
-      <Post className="blog-post">
-        <Title>{title}</Title>
-        <Date>{date}</Date>
+      <PostWrapper>
+        <PostContent className="blog-post">
+          <Title>{title}</Title>
+          <Date>{date}</Date>
 
-        <MDXRenderer>{body}</MDXRenderer>
+          <MDXRenderer>{body}</MDXRenderer>
 
-        <EmailSignup />
+          <EmailSignup />
 
-        <PrevNext>
-          <li>
-            {previous && (
-              <Link to={previous.fields.slug} rel="prev">
-                ← {previous.frontmatter.title}
-              </Link>
-            )}
-          </li>
-          <li>
-            {next && (
-              <Link to={next.fields.slug} rel="next">
-                {next.frontmatter.title} →
-              </Link>
-            )}
-          </li>
-        </PrevNext>
-      </Post>
+          <PrevNext>
+            <li>
+              {previous && (
+                <Link to={previous.fields.slug} rel="prev">
+                  ← {previous.frontmatter.title}
+                </Link>
+              )}
+            </li>
+            <li>
+              {next && (
+                <Link to={next.fields.slug} rel="next">
+                  {next.frontmatter.title} →
+                </Link>
+              )}
+            </li>
+          </PrevNext>
+        </PostContent>
+      </PostWrapper>
     </DefaultLayout>
   )
 }
@@ -79,27 +82,10 @@ export const pageQuery = graphql`
   }
 `
 
-const Post = styled.div`
-  font-size: 18px;
-  line-height: 1.6;
+const PostWrapper = styled.div`
   width: 700px;
   max-width: 94%;
   margin: 0 auto;
-  overflow-wrap: break-word;
-  word-wrap: break-word;
-
-  @media (max-width: 600px) {
-    font-size: 16px;
-  }
-
-  img {
-    border: 1px solid #ddd;
-    max-width: 100%;
-  }
-
-  li {
-    margin-bottom: 10px;
-  }
 `
 
 const Title = styled.h1`

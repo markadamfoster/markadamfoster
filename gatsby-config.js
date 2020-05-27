@@ -1,5 +1,3 @@
-// const path = require('path')
-
 module.exports = {
   siteMetadata: {
     title: 'Mark Foster',
@@ -49,7 +47,6 @@ module.exports = {
         path: `${__dirname}/src/pages`,
       },
     },
-
     `gatsby-transformer-sharp`,
     `gatsby-plugin-resolve-src`,
     `gatsby-plugin-sharp`,
@@ -80,5 +77,6 @@ module.exports = {
     },
     `gatsby-plugin-offline`,
     `gatsby-plugin-react-helmet`,
+    `gatsby-plugin-postcss`,
   ],
 }

@@ -2,9 +2,13 @@ import React from 'react'
 import { PropTypes } from 'prop-types'
 import styled from 'styled-components'
 
+import { PostContent } from 'Components/Shared/PostContent'
+
 const Content = ({ children }) => (
   <Wrapper>
-    <Inner>{children}</Inner>
+    <Inner>
+      <PostContent>{children}</PostContent>
+    </Inner>
   </Wrapper>
 )
 

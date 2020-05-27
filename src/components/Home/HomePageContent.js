@@ -32,7 +32,7 @@ const SectionTitle = styled.h2`
   text-align: left;
   margin: 0;
   padding: 24px 0;
-  font-size: 3rem;
+  font-size: 2rem;
   background-color: ${colors.offWhiteBG};
   box-shadow: inset 0 0 1px rgba(0, 0, 0, 0.04),
     inset 0 0 5px rgba(0, 0, 0, 0.01), inset 0 5px 22px -8px rgba(0, 0, 0, 0.05);
