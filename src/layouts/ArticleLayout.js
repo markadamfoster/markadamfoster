@@ -5,10 +5,10 @@ import { MDXRenderer } from 'gatsby-plugin-mdx'
 import PropTypes from 'prop-types'
 import styled from 'styled-components'
 
-import { PostContent } from 'Components/Shared/PostContent'
+import { PostContent } from 'components/Shared/PostContent'
 import { colors } from 'Constants'
 import DefaultLayout from './DefaultLayout'
-import { EmailSignup } from '../components/EmailSignup'
+import { EmailSignup } from 'components/EmailSignup'
 
 import 'styles/prismjs-theme.css'
 
