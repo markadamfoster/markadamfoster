@@ -1,0 +1,20 @@
+---
+templateKey: video
+title: 'Limit Changes to a JavaScript object with Object.seal()'
+url: 'https://egghead.io/lessons/javascript-limit-changes-to-a-javascript-object-with-object-seal'
+featuredImage: './object-seal.jpg'
+icon: 'javascript'
+featured: true
+date: '2020-05-08'
+---
+
+import EggheadEmbed from 'components/Shared/EggheadEmbed'
+
+<EggheadEmbed
+  link="https://egghead.io/lessons/javascript-limit-changes-to-a-javascript-object-with-object-seal"
+  title="Limit Changes to a JavaScript object with Object.seal()"
+/>
+
+In this lesson we'll learn how to limit the types of changes that can be done to an object in JavaScript using the built in `Object.seal()` method. Once an object has been passed to `Object.seal()`, existing properties can be updated, but no new properties can be added and no properties can be deleted.
+
+This is helpful in a variety of situations, particularly with preventing inadvertent changes to an object's structure throughout a codebase, while still allowing for updates.

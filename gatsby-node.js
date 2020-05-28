@@ -5,6 +5,7 @@ exports.onCreateNode = ({ node, actions, getNode }) => {
   // creates the `node.fields.slug` property to all Mdx pages
   if (node.internal.type === `Mdx`) {
     const value = createFilePath({ node, getNode })
+
     actions.createNodeField({
       name: `slug`,
       node,

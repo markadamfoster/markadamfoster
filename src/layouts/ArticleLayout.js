@@ -116,11 +116,10 @@ const Date = styled.div`
 `
 
 const PrevNext = styled.ul`
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: space-between;
-  list-style: none;
-  padding: 0;
-
-  font-size: 15px;
+  display: flex !important;
+  flex-wrap: wrap !important;
+  justify-content: space-between !important;
+  list-style: none !important;
+  padding: 0 !important;
+  font-size: 15px !important;
 `
