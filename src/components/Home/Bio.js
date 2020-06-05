@@ -3,9 +3,9 @@ import styled from 'styled-components'
 
 import profileImg from 'assets/mark_foster.jpg'
 
-const Bio = () => {
+export default function Bio() {
   return (
-    <div className="py-10 sm:py-20 lg:py-">
+    <div className="py-10 sm:py-20 lg:py-32">
       <div className="container flex flex-col sm:flex-row">
         <Img src={profileImg} />
 
@@ -28,16 +28,6 @@ const Bio = () => {
     </div>
   )
 }
-
-export default Bio
-
-const Wrapper = styled.div`
-  padding: 10vh 0 8vh;
-
-  @media (max-width: 540px) {
-    padding: 6vw 0;
-  }
-`
 
 const Img = styled.img`
   height: 120px;
