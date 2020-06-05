@@ -2,39 +2,30 @@ import React from 'react'
 import styled from 'styled-components'
 
 import profileImg from 'assets/mark_foster.jpg'
-import { Container } from 'styles/Container'
 
 const Bio = () => {
   return (
-    <Wrapper>
-      <Content>
+    <div className="py-10 sm:py-20 lg:py-">
+      <div className="container flex flex-col sm:flex-row">
         <Img src={profileImg} />
 
         <div>
-          <h1 className="text-left text-3xl">
+          <h1 className="text-left text-3xl mt-0">
             Hi, I&apos;m Mark
             <span role="img" aria-label="waving hand" className="ml-2">
               👋
             </span>
           </h1>
 
-          <div className="leading-relaxed text-base lg:text-lg">
+          <div className="leading-relaxed text-base sm:text-lg lg:text-xl">
             <p className="mt-5">
-              I am a software developer specializing in JavaScript and React.
-            </p>
-            <p className="mt-5">
-              My current focus is pushing further into the depths of JavaScript
-              and ReactJS, and teaching what I learn along the way.
-            </p>
-            <p className="mt-5">
-              I also build indie products, including{' '}
-              <a href="https://www.photoinvoice.com">Photo Invoice</a>, an
-              invoicing platform for photographers.
+              I&apos;m a software engineer specializing in building custom web
+              and mobile apps in React and React Native.
             </p>
           </div>
         </div>
-      </Content>
-    </Wrapper>
+      </div>
+    </div>
   )
 }
 
@@ -45,14 +36,6 @@ const Wrapper = styled.div`
 
   @media (max-width: 540px) {
     padding: 6vw 0;
-  }
-`
-
-const Content = styled(Container)`
-  display: flex;
-
-  @media (max-width: 540px) {
-    flex-direction: column;
   }
 `
 

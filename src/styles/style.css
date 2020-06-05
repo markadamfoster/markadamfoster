@@ -51,8 +51,12 @@ blockquote {
   box-shadow: 2px 2px 8px rgba(0, 0, 0, 0.05);
 }
 
-container {
-  max-width: calc(1200px + 8vw);
+.container {
+  /* max-width: calc(1200px + 8vw);
+  margin: 0 auto;
+  padding: 0 4vw; */
+  flex: 1;
+  max-width: calc(800px + 8vw);
   margin: 0 auto;
   padding: 0 4vw;
 }
