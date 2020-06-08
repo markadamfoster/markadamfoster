@@ -30,8 +30,8 @@ export default function Bio() {
 }
 
 const Img = styled.img`
-  height: 120px;
-  width: 120px;
+  height: 140px;
+  width: 140px;
   flex-shrink: 0;
   margin-right: 30px;
   border-radius: 100%;

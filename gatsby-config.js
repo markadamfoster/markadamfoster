@@ -3,8 +3,11 @@ module.exports = {
     title: 'Mark Foster',
     author: 'Mark Foster',
     description:
-      'Mark is a web developer in Boise, Idaho who writes about JavaScript, React, and product creation.',
+      'Mark Foster. Boise, ID. Software developer specializing in custom web and mobile apps built with React and React Native.',
     siteUrl: 'https://markadamfoster.com',
+    social: {
+      twitter: 'markadamfoster',
+    },
   },
   plugins: [
     {
