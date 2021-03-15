@@ -4,6 +4,8 @@ import styled from 'styled-components'
 import { useStaticQuery, graphql } from 'gatsby'
 
 import ArticleListItem from './ArticleListItem'
+import Videos from '../Videos/Videos'
+// import SectionTitle from './SectionTitle'
 
 function ArticlesPageContent() {
   const data = useStaticQuery(graphql`
@@ -34,6 +36,8 @@ function ArticlesPageContent() {
   return (
     <Wrapper>
       <h1>Articles</h1>
+
+      <Videos />
 
       <List>
         {articles.map(({ node: article }) => {
