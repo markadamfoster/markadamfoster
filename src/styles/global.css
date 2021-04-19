@@ -3,10 +3,10 @@
 @tailwind utilities;
 
 :root {
-  --textDark: #3c4653;
+  --textDark: #0b132b;
   --richBlack: #040404;
   --blue: #1d3461;
-  --teal: #0c7489;
+  --teal: #247ba0;
   --action: #ff383c;
   --actionHover: #f61b26;
   --offWhite: #eee;

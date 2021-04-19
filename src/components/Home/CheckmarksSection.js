@@ -22,7 +22,7 @@ export default function CheckmarksSection() {
           communication and a proven track record
         </CheckmarkItem>
       </ul>
-      <h3 className="text-3xl">You&apos;re in the right place.</h3>
+      <h3 className="text-2xl">You&apos;re in the right place.</h3>
     </div>
   )
 }
