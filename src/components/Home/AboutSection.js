@@ -11,10 +11,17 @@ export default function AboutSection() {
         <Img src={picSrc} />
       </ImgWrapper>
       <Text>
-        Lorem ipsum dolor sit amet, consectetur adipiscing elit. In dignissim
-        commodo odio sed tempus. Aenean vel lectus sem. Proin velit massa,
-        bibendum ac tristique ut, interdum ut nisi.
-        <ReadMore to="/about">Read more about my story →</ReadMore>
+        <p>
+          Hi, I&apos;m Mark!{' '}
+          <span role="img" aria-label="hand waving">
+            👋
+          </span>
+        </p>
+        <p>
+          I&apos;ve been a developer for over 10 years, and would love to use my
+          React experience to build your next web or mobile app.
+        </p>
+        <ReadMore to="/about">More about Me →</ReadMore>
       </Text>
     </Wrapper>
   )
@@ -66,6 +73,10 @@ const Text = styled.div`
   padding: 20px;
   font-size: 18px;
 
+  p {
+    margin: 5px 0;
+  }
+
   @media (max-width: 900px) {
     padding-right: 50px;
   }
@@ -84,7 +95,7 @@ const Text = styled.div`
 const ReadMore = styled(Link)`
   color: white !important;
   font-weight: 900;
-  margin-top: 20px;
+  margin-top: 14px;
   display: block;
 
   @media (max-width: 550px) {

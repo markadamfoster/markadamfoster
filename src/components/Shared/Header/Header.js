@@ -10,6 +10,7 @@ import { useWindowSize } from 'utils/useWindowSize'
 
 function Header() {
   const windowSize = useWindowSize()
+  const NAV_MENU_BREAKPOINT = 780 // when to switch to mobile nav menu
 
   return (
     <Wrapper>
@@ -19,7 +20,11 @@ function Header() {
             <Logo>Mark Foster</Logo>
           </Link>
 
-          {windowSize.width >= 540 ? <NavDesktop /> : <NavMobile />}
+          {windowSize.width <= NAV_MENU_BREAKPOINT ? (
+            <NavMobile />
+          ) : (
+            <NavDesktop />
+          )}
         </Content>
       </Container>
     </Wrapper>

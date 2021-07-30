@@ -10,6 +10,8 @@ import CheckmarksSection from './CheckmarksSection'
 import Testamonial from './Testamonial'
 import ServicesSection from './ServicesSection'
 import AboutSection from './AboutSection'
+// import PortfolioSection from './PortfolioSection'
+import ContactForm from 'components/Shared/ContactForm'
 
 HomePage.propTypes = {
   articles: PropTypes.array, // TODO: either use this or clean it up (including the pagequery)
@@ -24,8 +26,10 @@ export default function HomePage() {
         <Hero />
         <CheckmarksSection />
         <Testamonial />
+        {/* <PortfolioSection /> */}
         <ServicesSection />
         <AboutSection />
+        <ContactForm formLocation="Home Page" />
       </Container>
     </DefaultLayout>
   )

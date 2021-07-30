@@ -2,18 +2,19 @@ import React from 'react'
 import styled from 'styled-components'
 import PropTypes from 'prop-types'
 
-ServicesItem.propTypes = {
+PortfolioItem.propTypes = {
   title: PropTypes.string,
+  summary: PropTypes.string,
   description: PropTypes.string,
-  img: PropTypes.object,
 }
 
-export default function ServicesItem({ title, description, img }) {
+export default function PortfolioItem({ title, summary, description }) {
   return (
     <Wrapper>
-      <Image src={img} />
+      <Image />
       <Text>
         <Title>{title}</Title>
+        <Summary>{summary}</Summary>
         <Description>{description}</Description>
       </Text>
     </Wrapper>
@@ -22,26 +23,33 @@ export default function ServicesItem({ title, description, img }) {
 
 const Wrapper = styled.div`
   display: flex;
-  align-items: center;
   margin: 50px 0;
 `
 
-const Image = styled.img`
-  height: 100px;
-  width: 100px;
-  border-radius: 100%;
-  box-shadow: 2px 2px 8px rgba(0, 0, 0, 0.2);
-  background-color: rgba(234, 234, 323, 0.3);
+const Image = styled.div`
+  height: 200px;
+  width: 150px;
+  background-color: #ccc;
   flex-shrink: 0;
 `
 
 const Text = styled.div`
+  flex: 1;
   margin-left: 20px;
+  display: flex;
+  flex-direction: column;
 `
 
 const Title = styled.div`
   font-size: 28px;
   font-weight: 900;
+  margin-bottom: 15px;
+`
+
+const Summary = styled.div`
+  font-size: 17px;
+  font-weight: 900;
+  margin-bottom: 10px;
 `
 
 const Description = styled.div`

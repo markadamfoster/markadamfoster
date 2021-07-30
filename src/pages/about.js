@@ -1,33 +1,28 @@
-import React, { Component } from 'react'
+import React from 'react'
 import { graphql } from 'gatsby'
 import get from 'lodash/get'
 import { Helmet } from 'react-helmet'
 
 import Layout from '../layouts/DefaultLayout'
-import About from 'components/About/About'
+import AboutPage from 'components/About/AboutPage'
 
-class AboutPage extends Component {
-  render() {
-    const siteTitle = get(this, 'props.data.site.siteMetadata.title')
-    const siteDescription = get(
-      this,
-      'props.data.site.siteMetadata.description'
-    )
+function About(props) {
+  const siteTitle = get(props, 'data.site.siteMetadata.title')
+  const siteDescription = get(props, 'data.site.siteMetadata.description')
 
-    return (
-      <Layout>
-        <Helmet
-          htmlAttributes={{ lang: 'en' }}
-          meta={[{ name: 'description', content: siteDescription }]}
-          title={`About | ${siteTitle}`}
-        />
-        <About />
-      </Layout>
-    )
-  }
+  return (
+    <Layout>
+      <Helmet
+        htmlAttributes={{ lang: 'en' }}
+        meta={[{ name: 'description', content: siteDescription }]}
+        title={`About | ${siteTitle}`}
+      />
+      <AboutPage />
+    </Layout>
+  )
 }
 
-export default AboutPage
+export default About
 
 export const pageQuery = graphql`
   query {

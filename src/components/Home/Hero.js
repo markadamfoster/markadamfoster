@@ -1,9 +1,14 @@
 import React from 'react'
 import styled from 'styled-components'
+import { animateScroll } from 'react-scroll'
 
 import profileImg from 'assets/Mark_Foster_Freelance_Develper.png'
 
 export default function Hero() {
+  const scrollToBottom = () => {
+    animateScroll.scrollToBottom()
+  }
+
   return (
     <div className="py-10 sm:py-20 lg:py-32">
       <Img src={profileImg} />
@@ -15,14 +20,19 @@ export default function Hero() {
 
         <div className="text-base sm:text-lg lg:text-xl">
           <p className="mt-5 leading-8">
-            Hi, I&apos;m Mark- a software engineer and freelance developer. I
-            build custom custom apps and websites for companies, startups, and
-            just for fun.
+            I&apos;m Mark, an experienced React and React Native software
+            engineer, ready to build your next big website or custom app.{' '}
+            <span role="img" aria-label="rocket">
+              🚀
+            </span>
           </p>
         </div>
       </div>
 
-      <button className="bg-maf-teal text-white px-6 py-3 mt-6 rounded-md">
+      <button
+        className="bg-maf-teal text-white px-6 py-3 mt-6 rounded-md"
+        onClick={scrollToBottom}
+      >
         Work with me
       </button>
     </div>
