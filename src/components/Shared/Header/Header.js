@@ -10,6 +10,7 @@ import { useWindowSize } from 'utils/useWindowSize'
 
 function Header() {
   const windowSize = useWindowSize()
+  const NAV_MENU_BREAKPOINT = 780 // when to switch to mobile nav menu
 
   return (
     <Wrapper>
@@ -19,7 +20,11 @@ function Header() {
             <Logo>Mark Foster</Logo>
           </Link>
 
-          {windowSize.width >= 540 ? <NavDesktop /> : <NavMobile />}
+          {windowSize.width <= NAV_MENU_BREAKPOINT ? (
+            <NavMobile />
+          ) : (
+            <NavDesktop />
+          )}
         </Content>
       </Container>
     </Wrapper>
@@ -34,9 +39,6 @@ const Wrapper = styled.header`
   height: 80px;
   display: flex;
   align-items: center;
-  background-color: ${colors.offWhiteBG};
-  box-shadow: inset 0 0 1px rgba(0, 0, 0, 0.04),
-    inset 0 0 5px rgba(0, 0, 0, 0.01), inset 0 5px 22px -8px rgba(0, 0, 0, 0.05);
   z-index: 100;
 
   @media (max-width: 500px) {
@@ -53,9 +55,8 @@ const Content = styled.div`
 const Logo = styled.div`
   display: flex;
   align-items: center;
-  font-size: 21px;
+  font-size: 28px;
   font-weight: 900;
-  text-transform: uppercase;
   letter-spacing: 1px;
   color: ${colors.textDark};
 

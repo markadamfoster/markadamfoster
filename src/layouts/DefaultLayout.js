@@ -2,11 +2,8 @@ import React from 'react'
 import { PropTypes } from 'prop-types'
 import styled from 'styled-components'
 
-import Header from '../components/Header/Header'
+import Header from 'components/Shared/Header'
 import Footer from 'components/Footer'
-
-import 'styles/tailwind.css'
-import 'styles/style.css'
 
 const DefaultLayout = ({ children }) => {
   return (

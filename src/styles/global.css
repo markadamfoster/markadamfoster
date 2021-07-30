@@ -1,20 +1,25 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
 :root {
-  --textDark: #3c4653;
+  --textDark: #0b132b;
   --richBlack: #040404;
   --blue: #1d3461;
-  --teal: #0c7489;
+  --teal: #247ba0;
   --action: #ff383c;
   --actionHover: #f61b26;
   --offWhite: #eee;
+  --offWhiteBG: #f1f1f1;
 }
 
 body {
-  border-top: 6px solid var(--action);
-  font-family: Inter, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto,
+  font-family: Lato, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto,
     Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
   color: var(--textDark);
   overflow-x: hidden;
   -webkit-font-smoothing: antialiased;
+  background-color: var(--offWhiteBG);
 }
 
 /* Headings */
@@ -52,9 +57,6 @@ blockquote {
 }
 
 .container {
-  /* max-width: calc(1200px + 8vw);
-  margin: 0 auto;
-  padding: 0 4vw; */
   flex: 1;
   max-width: calc(800px + 8vw);
   margin: 0 auto;
