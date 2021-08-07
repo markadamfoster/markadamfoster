@@ -4,8 +4,10 @@ export const colors = {
   richBlack: '#040404',
   blue: '#1D3461',
   teal: '#0C7489',
-  action: '#ff383c',
-  actionHover: '#e41a1e',
+  // action: '#ff383c', // old red values
+  // actionHover: '#e41a1e', // old red values
+  action: '#0C7489',
+  actionHover: '#095b6c',
   offWhite: '#f5f5f5',
 
   // Backgrounds

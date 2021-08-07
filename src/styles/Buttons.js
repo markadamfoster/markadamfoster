@@ -4,12 +4,11 @@ import Link from 'gatsby-link'
 import { colors } from 'Constants'
 
 const buttonBaseStyles = css`
-  font-size: 14px;
-  display: inline-block;
-  padding: 0 20px;
-  font-weight: 700;
-  height: 2.8rem;
-  line-height: 2.8rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 12px 28px;
+  font-weight: 400;
   text-align: center;
   border: none;
   border-radius: 6px;
@@ -24,6 +23,11 @@ const primaryStyles = css`
   &:hover {
     background-color: ${colors.actionHover};
     color: white;
+  }
+
+  &:focus {
+    outline: none;
+    box-shadow: 0 0 0 2px rgba(21, 156, 228, 0.4);
   }
 `
 

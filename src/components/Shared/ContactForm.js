@@ -2,6 +2,8 @@ import React from 'react'
 import PropTypes from 'prop-types'
 import styled from 'styled-components'
 
+import { PrimaryButton } from 'styles/Buttons'
+
 ContactForm.propTypes = {
   formLocation: PropTypes.string.isRequired,
 }
@@ -34,12 +36,9 @@ export default function ContactForm({ formLocation }) {
             <textarea name="message" />
           </label>
         </div>
-        <button
-          type="submit"
-          className="bg-maf-teal text-white px-6 py-3 mt-6 rounded-md"
-        >
-          Send
-        </button>
+        <ButtonWrapper>
+          <PrimaryButton type="submit">Send</PrimaryButton>
+        </ButtonWrapper>
       </form>
     </Wrapper>
   )
@@ -96,4 +95,8 @@ const Description = styled.div`
   @media (max-width: 500px) {
     font-size: 15px;
   }
+`
+
+const ButtonWrapper = styled.div`
+  margin-top: 1rem;
 `
