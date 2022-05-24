@@ -8,3 +8,4 @@
 - Sales
 - Serverless
 - Side Projects
+- Framer Motion
