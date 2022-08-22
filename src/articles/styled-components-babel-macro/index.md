@@ -11,11 +11,11 @@ tags:
 
 I love Styled Components, and have used it for years as my preferred CSS-in-JS library. But one annoyance is the randomly-generated class names can make using the inspector difficult:
 
-![Before - hard to read class names](before.jpg)
+![Before - Styled Component auto-generated class names are hard to read and use](before.jpg)
 
 Luckily, styled-components offers a Babel plugin to automatically add the React component display name to the generated classes (as well as in your React DevTools), which ends up looking like this:
 
-![Before - hard to read class names](after.jpg)
+![After - The Babel plugin macro makes class names more useful](after.jpg)
 
 In a large and complex app, this is _immensely_ helpful. So let's dig into getting this working with create-react-app.
 
