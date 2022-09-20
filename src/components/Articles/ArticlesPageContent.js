@@ -37,13 +37,13 @@ function ArticlesPageContent() {
     <Wrapper>
       <h1>Articles</h1>
 
-      <Videos />
-
       <List>
         {articles.map(({ node: article }) => {
           return <ArticleListItem key={article.fields.slug} article={article} />
         })}
       </List>
+
+      <Videos />
     </Wrapper>
   )
 }
