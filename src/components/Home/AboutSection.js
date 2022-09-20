@@ -18,8 +18,8 @@ export default function AboutSection() {
           </span>
         </p>
         <p>
-          I&apos;ve been a developer for over 10 years, and would love to use my
-          React experience to build your next web or mobile app.
+          I&apos;m a software developer, maker, cyclist, skiier, explorer, and
+          DIY enthusist.
         </p>
         <ReadMore to="/about">More about Me →</ReadMore>
       </Text>
@@ -29,7 +29,7 @@ export default function AboutSection() {
 
 const Wrapper = styled.div`
   height: 200px;
-  margin: 64px -60px;
+  margin: 200px -60px;
   background-color: var(--teal);
   display: flex;
   align-items: center;

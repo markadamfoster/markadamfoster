@@ -25,6 +25,8 @@ function Articles() {
             frontmatter {
               title
               popular
+              date
+              tags
             }
           }
         }
@@ -37,33 +39,27 @@ function Articles() {
     .filter((post) => post.node.frontmatter.popular)
     .slice(0, 3)
 
-  const recentArticles = articles.slice(0, 5)
+  const recentArticles = articles.slice(0, 3)
 
   return (
     <Wrapper>
       <h3>Most Popular</h3>
       <List>
         {popularArticles.map(({ node: article }) => (
-          <ArticleLink
-            key={article.fields.slug}
-            slug={article.fields.slug}
-            title={article.frontmatter.title}
-          />
+          <ArticleLink key={article.fields.slug} article={article} />
         ))}
       </List>
-
-      <h3>Most Recent</h3>
+      <LatestHeader>
+        <h3>Latest Articles</h3>
+        <div>
+          <OutlineLinkButton to="/articles">All Articles →</OutlineLinkButton>
+        </div>
+      </LatestHeader>
       <List>
         {recentArticles.map(({ node: article }) => (
-          <ArticleLink
-            key={article.fields.slug}
-            slug={article.fields.slug}
-            title={article.frontmatter.title}
-          />
+          <ArticleLink key={article.fields.slug} article={article} />
         ))}
       </List>
-
-      <OutlineLinkButton to="/articles">All Articles →</OutlineLinkButton>
     </Wrapper>
   )
 }
@@ -75,13 +71,25 @@ const Wrapper = styled.div`
 
   h3 {
     margin-top: 30px;
-    font-size: 1.25rem;
+    font-size: 2rem;
   }
 `
 
 const List = styled.ul`
-  display: block;
-  margin: 20px 0 30px 20px;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: repeat(1, 1fr);
+  grid-column-gap: 20px;
+  grid-row-gap: 20px;
+
+  flex-wrap: wrap;
+  margin: 20px 0 30px;
   padding: 0;
-  list-style-type: disc;
+  list-style-type: none;
+`
+
+const LatestHeader = styled.div`
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
 `
