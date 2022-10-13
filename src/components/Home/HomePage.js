@@ -10,7 +10,7 @@ import DefaultLayout from 'layouts/DefaultLayout'
 // import Testamonial from './Testamonial'
 // import ServicesSection from './ServicesSection'
 import AboutSection from './AboutSection'
-// import PortfolioSection from './PortfolioSection'
+import ProjectsSection from './ProjectsSection'
 // import ContactForm from 'components/Shared/ContactForm'
 
 HomePage.propTypes = {
@@ -27,7 +27,7 @@ export default function HomePage() {
         <Articles />
         {/* <CheckmarksSection /> */}
         {/* <Testamonial /> */}
-        {/* <PortfolioSection /> */}
+        <ProjectsSection />
         {/* <ServicesSection /> */}
         <AboutSection />
         {/* <ContactForm formLocation="Home Page" /> */}
