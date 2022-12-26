@@ -43,7 +43,7 @@ function Articles() {
 
   return (
     <Wrapper>
-      <h3>Most Popular</h3>
+      <h3>Popular Articles</h3>
       <List>
         {popularArticles.map(({ node: article }) => (
           <ArticleLink key={article.fields.slug} article={article} />
