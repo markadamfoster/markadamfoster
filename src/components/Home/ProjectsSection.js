@@ -5,7 +5,7 @@ import { Link } from 'gatsby'
 import ProjectEntry from './ProjectEntry'
 import photoInvoiceImg from 'assets/projects/covers/fp-photoinvoice.png'
 import dailyAffirmImg from 'assets/projects/covers/fp-dailyaffirm.png'
-import { OutlineLinkButton } from 'styles/Buttons'
+import ViewAllButton from './ViewAllButton'
 
 export default function ProjectsSection() {
   return (
@@ -13,7 +13,7 @@ export default function ProjectsSection() {
       <Header>
         <h3>Latest Projects</h3>
         <div>
-          <OutlineLinkButton to="/projects">All Projects →</OutlineLinkButton>
+          <ViewAllButton to="/projects">All Projects</ViewAllButton>
         </div>
       </Header>
       <ul className="my-10">

@@ -2,7 +2,7 @@ import React from 'react'
 import PropTypes from 'prop-types'
 import styled from 'styled-components'
 
-import { PrimaryButton } from 'styles/Buttons'
+import { PrimaryButton } from 'components/Shared/Buttons'
 
 ContactForm.propTypes = {
   formLocation: PropTypes.string.isRequired,

@@ -11,7 +11,7 @@ ProjectEntry.propTypes = {
   summary: PropTypes.string,
   description: PropTypes.string,
   bg: PropTypes.string,
-  img: PropTypes.object,
+  img: PropTypes.string,
   liveSiteUrl: PropTypes.string,
   learnMoreUrl: PropTypes.string,
 }

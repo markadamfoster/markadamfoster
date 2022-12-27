@@ -2,7 +2,7 @@ import React from 'react'
 import PropTypes from 'prop-types'
 import styled from 'styled-components'
 
-import { Container } from 'styles/Container'
+import { Container } from 'components/Shared/Container'
 import { colors } from 'Constants'
 
 SectionTitle.propTypes = {

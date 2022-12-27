@@ -3,7 +3,7 @@ import Link from 'gatsby-link'
 import styled from 'styled-components'
 
 import { colors } from 'Constants'
-import { Container } from 'styles/Container'
+import { Container } from 'components/Shared/Container'
 import NavDesktop from './NavDesktop'
 import NavMobile from './NavMobile'
 import { useWindowSize } from 'utils/useWindowSize'

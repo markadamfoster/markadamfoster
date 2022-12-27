@@ -1,7 +1,7 @@
 import React from 'react'
 import styled from 'styled-components'
 
-import { Container } from 'styles/Container'
+import { Container } from 'components/Shared/Container'
 import profileImg from 'assets/Mark_Foster_Freelance_Develper.png'
 import Photos from './Photos'
 import ContactForm from 'components/Shared/ContactForm'

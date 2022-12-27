@@ -3,14 +3,14 @@ import PropTypes from 'prop-types'
 import styled from 'styled-components'
 import { useStaticQuery, graphql } from 'gatsby'
 
-import { OutlineLinkButton } from 'styles/Buttons'
+import ViewAllButton from './ViewAllButton'
 import ArticleLink from './ArticleLink'
 
-Articles.propTypes = {
+ArticlesSection.propTypes = {
   articles: PropTypes.array,
 }
 
-function Articles() {
+export default function ArticlesSection() {
   const data = useStaticQuery(graphql`
     query ArticlesQuery {
       allMdx(
@@ -52,7 +52,7 @@ function Articles() {
       <LatestHeader>
         <h3>Latest Articles</h3>
         <div>
-          <OutlineLinkButton to="/articles">All Articles →</OutlineLinkButton>
+          <ViewAllButton to="/articles">All Articles</ViewAllButton>
         </div>
       </LatestHeader>
       <List>
@@ -63,8 +63,6 @@ function Articles() {
     </Wrapper>
   )
 }
-
-export default Articles
 
 const Wrapper = styled.div`
   margin: 30px 0;
