@@ -1,8 +1,8 @@
 import React from 'react'
-import { Helmet } from 'react-helmet'
 
 // Components
 import DefaultLayout from 'layouts/DefaultLayout'
+import SEO from 'components/Shared/SEO'
 import Intro from 'components/Projects/ProjectSingle/IntroSection'
 import Content from 'components/Projects/ProjectSingle/Content'
 import ProjectLinks from 'components/Projects/ProjectSingle/ProjectLinks'
@@ -14,13 +14,13 @@ import ssFront from 'assets/projects/Panoractives/pano-frontpage.jpg'
 import ssPhotography from 'assets/projects/Panoractives/pano-photography.jpg'
 import ssTour from 'assets/projects/Panoractives/pano-tour.jpg'
 
+export const Head = () => <SEO title="Panoractives" />
+
 const Panoractives = () => {
   const project = projectData.find((project) => project.name === 'Panoractives')
 
   return (
     <DefaultLayout>
-      <Helmet title="Project: Panoractives" />
-
       <Intro project={project} />
 
       <Content>

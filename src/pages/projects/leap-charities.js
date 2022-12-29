@@ -1,8 +1,8 @@
 import React from 'react'
-import { Helmet } from 'react-helmet'
 
 // Components
 import DefaultLayout from 'layouts/DefaultLayout'
+import SEO from 'components/Shared/SEO'
 import Intro from 'components/Projects/ProjectSingle/IntroSection'
 import Content from 'components/Projects/ProjectSingle/Content'
 import ProjectLinks from 'components/Projects/ProjectSingle/ProjectLinks'
@@ -13,6 +13,8 @@ import { projectData } from 'components/Projects/ProjectData'
 import ssFront from 'assets/projects/leap-charities/front-page.jpg'
 import ssBlog from 'assets/projects/leap-charities/blog.jpg'
 
+export const Head = () => <SEO title="LEAP Charities" />
+
 const LeapCharities = () => {
   const project = projectData.find(
     (project) => project.slug === 'leap-charities'
@@ -20,8 +22,6 @@ const LeapCharities = () => {
 
   return (
     <DefaultLayout>
-      <Helmet title="Project: LEAP Charities" />
-
       <Intro project={project} />
 
       <Content>

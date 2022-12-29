@@ -1,12 +1,14 @@
 import React from 'react'
-import { Helmet } from 'react-helmet'
 
 // Components
 import DefaultLayout from 'layouts/DefaultLayout'
+import SEO from 'components/Shared/SEO'
 import Intro from 'components/Projects/ProjectSingle/IntroSection'
 import Content from 'components/Projects/ProjectSingle/Content'
 import ProjectLinks from 'components/Projects/ProjectSingle/ProjectLinks'
 import { projectData } from 'components/Projects/ProjectData'
+
+export const Head = () => <SEO title="PhotoInvoice" />
 
 const PhotoInvoice = () => {
   const project = projectData.find(
@@ -15,8 +17,6 @@ const PhotoInvoice = () => {
 
   return (
     <DefaultLayout>
-      <Helmet title="Project: Photo Invoice" />
-
       <Intro project={project} />
 
       <Content>

@@ -1,8 +1,8 @@
 import React from 'react'
-import { Helmet } from 'react-helmet'
 
 // Components
 import DefaultLayout from 'layouts/DefaultLayout'
+import SEO from 'components/Shared/SEO'
 import Intro from 'components/Projects/ProjectSingle/IntroSection'
 import Content from 'components/Projects/ProjectSingle/Content'
 import ProjectLinks from 'components/Projects/ProjectSingle/ProjectLinks'
@@ -14,6 +14,8 @@ import ss01 from 'assets/projects/RentBuy/mrwb-front.jpg'
 import ss02 from 'assets/projects/RentBuy/mrwb-email-capture.jpg'
 import ss03 from 'assets/projects/RentBuy/mrwb-results.jpg'
 
+export const Head = () => <SEO title="My Rent Will Buy" />
+
 const MyRentWillBuy = () => {
   const project = projectData.find(
     (project) => project.name === 'My Rent Will Buy'
@@ -21,8 +23,6 @@ const MyRentWillBuy = () => {
 
   return (
     <DefaultLayout>
-      <Helmet title="Project: My Rent Will Buy" />
-
       <Intro project={project} />
 
       <Content>
