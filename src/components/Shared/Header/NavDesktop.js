@@ -1,6 +1,6 @@
 import React from 'react'
 import styled from 'styled-components'
-import Link from 'gatsby-link'
+import { Link } from 'gatsby'
 
 import { navLinks } from './navLinks'
 import { colors } from 'Constants'
@@ -8,7 +8,7 @@ import { colors } from 'Constants'
 const NavDesktop = () => {
   return (
     <nav>
-      {navLinks.map(nav => {
+      {navLinks.map((nav) => {
         return (
           <NavLink to={nav.url} key={nav.url} activeStyle={{ opacity: 1 }}>
             {nav.label}

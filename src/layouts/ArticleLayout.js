@@ -1,7 +1,8 @@
 import React from 'react'
 import { graphql, Link } from 'gatsby'
 import { Helmet } from 'react-helmet'
-import { MDXRenderer } from 'gatsby-plugin-mdx'
+import { MDXProvider } from '@mdx-js/react'
+// import { MDXRenderer } from 'gatsby-plugin-mdx'
 import PropTypes from 'prop-types'
 import styled from 'styled-components'
 
@@ -15,14 +16,13 @@ import 'styles/prismjs-theme.css'
 ArticleLayout.propTypes = {
   data: PropTypes.object.isRequired,
   pageContext: PropTypes.object.isRequired,
+  children: PropTypes.object,
 }
 
-export default function ArticleLayout(props) {
-  const { data, pageContext } = props
-  const { excerpt, body } = data.mdx
+export default function ArticleLayout({ data, children }) {
+  const { excerpt } = data.mdx
   const { title, date } = data.mdx.frontmatter
   const siteTitle = data.site.siteMetadata.title
-  const { previous, next } = pageContext
 
   return (
     <DefaultLayout>
@@ -37,26 +37,9 @@ export default function ArticleLayout(props) {
           <Title>{title}</Title>
           <Date>{date}</Date>
 
-          <MDXRenderer>{body}</MDXRenderer>
+          <MDXProvider>{children}</MDXProvider>
 
           <EmailSignup />
-
-          <PrevNext>
-            <li>
-              {previous && (
-                <Link to={previous.fields.slug} rel="prev">
-                  ← {previous.frontmatter.title}
-                </Link>
-              )}
-            </li>
-            <li>
-              {next && (
-                <Link to={next.fields.slug} rel="next">
-                  {next.frontmatter.title} →
-                </Link>
-              )}
-            </li>
-          </PrevNext>
         </PostContent>
       </PostWrapper>
     </DefaultLayout>

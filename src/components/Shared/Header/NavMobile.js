@@ -1,6 +1,6 @@
 import React, { useState } from 'react'
 import styled from 'styled-components'
-import Link from 'gatsby-link'
+import { Link } from 'gatsby'
 import { useSpring, animated } from 'react-spring'
 
 import { MenuIcon } from './MenuIcon'
@@ -21,7 +21,7 @@ const NavMobile = () => {
       {navOpen && (
         <Background style={props}>
           <Nav>
-            {navLinks.map(nav => {
+            {navLinks.map((nav) => {
               return (
                 <NavLink
                   to={nav.url}

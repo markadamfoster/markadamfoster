@@ -13,9 +13,6 @@ module.exports = {
     {
       resolve: `gatsby-plugin-mdx`,
       options: {
-        defaultLayouts: {
-          default: require.resolve('./src/layouts/ArticleLayout.js'),
-        },
         extensions: [`.mdx`, `.md`],
         gatsbyRemarkPlugins: [
           {
@@ -47,7 +44,7 @@ module.exports = {
       resolve: 'gatsby-source-filesystem',
       options: {
         name: 'articles',
-        path: `${__dirname}/src/articles/`,
+        path: `${__dirname}/src/articles`,
       },
     },
     {
@@ -58,6 +55,7 @@ module.exports = {
       },
     },
     `gatsby-transformer-sharp`,
+    `gatsby-plugin-image`,
     `gatsby-plugin-sharp`,
     `gatsby-plugin-resolve-src`,
     `gatsby-plugin-styled-components`,
@@ -88,5 +86,11 @@ module.exports = {
     `gatsby-plugin-offline`,
     `gatsby-plugin-react-helmet`,
     `gatsby-plugin-postcss`,
+    {
+      resolve: 'gatsby-plugin-html-attributes',
+      options: {
+        lang: 'en',
+      },
+    },
   ],
 }

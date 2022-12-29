@@ -1,8 +1,8 @@
 import React from 'react'
 import styled from 'styled-components'
 import PropTypes from 'prop-types'
-import Img from 'gatsby-image'
-import Link from 'gatsby-link'
+import { GatsbyImage, getImage } from 'gatsby-plugin-image'
+import { Link } from 'gatsby'
 import PlayIcon from 'react-feather/dist/icons/play'
 
 VideoEntry.propTypes = {
@@ -10,20 +10,18 @@ VideoEntry.propTypes = {
 }
 
 function VideoEntry({ video }) {
-  const { title } = video.frontmatter
+  const { title, featuredImage } = video.frontmatter
   const { slug } = video.fields
+  const image = getImage(featuredImage)
 
   return (
     <div className="sm:w-1/3 my-6">
       <div className="hover:bg-red-200 transition-all duration-200 p-3 rounded-lg">
         <Link to={slug}>
-          <div className="relative">
-            <Img
-              sizes={video.frontmatter.featuredImage.childImageSharp.sizes}
-              className="rounded-lg shadow-md"
-            />
+          <ImageWrapper>
+            <GatsbyImage image={image} alt={title} />
             <Icon size={54} color="white" />
-          </div>
+          </ImageWrapper>
 
           <div className="text-base sm:text-sm md:text-base mt-2 text-gray-900">
             {title}
@@ -41,4 +39,11 @@ const Icon = styled(PlayIcon)`
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
+`
+
+const ImageWrapper = styled.div`
+  position: relative;
+  img {
+    border-radius: 8px;
+  }
 `

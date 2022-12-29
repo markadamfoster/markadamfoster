@@ -1,7 +1,7 @@
 import React from 'react'
 import PropTypes from 'prop-types'
 import styled from 'styled-components/macro'
-import Link from 'gatsby-link'
+import { Link } from 'gatsby'
 import { ArrowRight } from 'react-feather'
 
 import { colors } from 'Constants'
