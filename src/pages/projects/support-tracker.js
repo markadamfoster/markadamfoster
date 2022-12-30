@@ -1,8 +1,8 @@
 import React from 'react'
-import { Helmet } from 'react-helmet'
 
 // Components
 import DefaultLayout from 'layouts/DefaultLayout'
+import SEO from 'components/Shared/SEO'
 import Intro from 'components/Projects/ProjectSingle/IntroSection'
 import Content from 'components/Projects/ProjectSingle/Content'
 import Screenshots from 'components/Projects/ProjectSingle/ScreenshotSection'
@@ -14,6 +14,8 @@ import ss02 from 'assets/projects/SupportTracker/support_tracker_2.jpg'
 import ss03 from 'assets/projects/SupportTracker/support_tracker_3.jpg'
 import ss04 from 'assets/projects/SupportTracker/support_tracker_4.jpg'
 
+export const Head = () => <SEO title="Support Tracker" />
+
 const SupportTracker = () => {
   const project = projectData.find(
     (project) => project.name === 'Support Tracker'
@@ -21,8 +23,6 @@ const SupportTracker = () => {
 
   return (
     <DefaultLayout>
-      <Helmet title="Project: Support Tracker" />
-
       <Intro project={project} />
 
       <Content>

@@ -1,10 +1,10 @@
 import React from 'react'
-import { graphql, Link } from 'gatsby'
-import { Helmet } from 'react-helmet'
-import { MDXRenderer } from 'gatsby-plugin-mdx'
+import { graphql } from 'gatsby'
+import { MDXProvider } from '@mdx-js/react'
 import PropTypes from 'prop-types'
 import styled from 'styled-components'
 
+import SEO from 'components/Shared/SEO'
 import { PostContent } from 'components/Shared/PostContent'
 import { colors } from 'Constants'
 import DefaultLayout from './DefaultLayout'
@@ -15,48 +15,28 @@ import 'styles/prismjs-theme.css'
 ArticleLayout.propTypes = {
   data: PropTypes.object.isRequired,
   pageContext: PropTypes.object.isRequired,
+  children: PropTypes.object,
 }
 
-export default function ArticleLayout(props) {
-  const { data, pageContext } = props
-  const { excerpt, body } = data.mdx
+/* eslint-disable react/prop-types */
+export const Head = ({ data }) => (
+  <SEO title={data.mdx.frontmatter.title} description={data.mdx.excerpt} />
+)
+/* eslint-enable */
+
+export default function ArticleLayout({ data, children }) {
   const { title, date } = data.mdx.frontmatter
-  const siteTitle = data.site.siteMetadata.title
-  const { previous, next } = pageContext
 
   return (
     <DefaultLayout>
-      <Helmet
-        htmlAttributes={{ lang: 'en' }}
-        meta={[{ name: 'description', content: excerpt }]}
-        title={`${title} | ${siteTitle}`}
-      />
-
       <PostWrapper>
         <PostContent className="blog-post">
           <Title>{title}</Title>
           <Date>{date}</Date>
 
-          <MDXRenderer>{body}</MDXRenderer>
+          <MDXProvider>{children}</MDXProvider>
 
           <EmailSignup />
-
-          <PrevNext>
-            <li>
-              {previous && (
-                <Link to={previous.fields.slug} rel="prev">
-                  ← {previous.frontmatter.title}
-                </Link>
-              )}
-            </li>
-            <li>
-              {next && (
-                <Link to={next.fields.slug} rel="next">
-                  {next.frontmatter.title} →
-                </Link>
-              )}
-            </li>
-          </PrevNext>
         </PostContent>
       </PostWrapper>
     </DefaultLayout>
@@ -65,11 +45,6 @@ export default function ArticleLayout(props) {
 
 export const pageQuery = graphql`
   query BlogPostQuery($id: String) {
-    site {
-      siteMetadata {
-        title
-      }
-    }
     mdx(id: { eq: $id }) {
       id
       body
@@ -113,13 +88,4 @@ const Date = styled.div`
   @media (max-width: 600px) {
     margin-bottom: 20px;
   }
-`
-
-const PrevNext = styled.ul`
-  display: flex !important;
-  flex-wrap: wrap !important;
-  justify-content: space-between !important;
-  list-style: none !important;
-  padding: 0 !important;
-  font-size: 15px !important;
 `

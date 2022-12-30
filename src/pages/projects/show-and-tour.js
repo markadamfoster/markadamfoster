@@ -1,8 +1,8 @@
 import React from 'react'
-import { Helmet } from 'react-helmet'
 
 // Components
 import DefaultLayout from 'layouts/DefaultLayout'
+import SEO from 'components/Shared/SEO'
 import Intro from 'components/Projects/ProjectSingle/IntroSection'
 import Content from 'components/Projects/ProjectSingle/Content'
 import ProjectLinks from 'components/Projects/ProjectSingle/ProjectLinks'
@@ -16,6 +16,8 @@ import ss03 from 'assets/projects/ShowAndTour/st-03.jpg'
 import ss04 from 'assets/projects/ShowAndTour/st-04.jpg'
 import ss05 from 'assets/projects/ShowAndTour/st-05.jpg'
 
+export const Head = () => <SEO title="Show & Tour" />
+
 const ShowAndTour = () => {
   const project = projectData.find(
     (project) => project.slug === 'show-and-tour'
@@ -23,8 +25,6 @@ const ShowAndTour = () => {
 
   return (
     <DefaultLayout>
-      <Helmet title="Project: Show & Tour" />
-
       <Intro project={project} />
 
       <Content>

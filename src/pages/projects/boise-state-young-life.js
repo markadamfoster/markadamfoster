@@ -1,8 +1,8 @@
 import React from 'react'
-import { Helmet } from 'react-helmet'
 
 // Components
 import DefaultLayout from 'layouts/DefaultLayout'
+import SEO from 'components/Shared/SEO'
 import Intro from 'components/Projects/ProjectSingle/IntroSection'
 import Content from 'components/Projects/ProjectSingle/Content'
 import ProjectLinks from 'components/Projects/ProjectSingle/ProjectLinks'
@@ -12,6 +12,8 @@ import { projectData } from 'components/Projects/ProjectData'
 // Screenshots
 import ss01 from 'assets/projects/BSUYoungLife/bsu-younglife.jpg'
 
+export const Head = () => <SEO title="Boise State Young Life" />
+
 const BoiseStateYoungLife = () => {
   const project = projectData.find(
     (project) => project.name === 'Boise State Young Life'
@@ -19,8 +21,6 @@ const BoiseStateYoungLife = () => {
 
   return (
     <DefaultLayout>
-      <Helmet title="Project: Boise State Young Life" />
-
       <Intro project={project} />
 
       <Content>

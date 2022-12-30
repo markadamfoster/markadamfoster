@@ -14,7 +14,7 @@ export default function ArticlesSection() {
   const data = useStaticQuery(graphql`
     query ArticlesQuery {
       allMdx(
-        sort: { fields: frontmatter___date, order: DESC }
+        sort: { frontmatter: { date: DESC } }
         filter: { frontmatter: { published: { eq: true } } }
       ) {
         edges {

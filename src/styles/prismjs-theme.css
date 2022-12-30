@@ -145,6 +145,12 @@ pre[class*='language-'] {
   cursor: help;
 }
 
+/*
+##################################
+CUSTOM STYLES
+##################################
+*/
+
 .gatsby-highlight-code-line {
   background-color: rgb(53, 59, 69);
   display: block;
@@ -153,4 +159,23 @@ pre[class*='language-'] {
   padding-right: 1em;
   padding-left: 0.75em;
   border-left: 0.25em solid #f99;
+}
+
+/* 
+This fixes styling issue where mdx started wrapping inline code blocks with divs with recent 
+updates. This causes inline code blocks to appear on their own line, so this "inlines" them.
+
+Note: as of 12/30/22, is not supported in Firefox ::sadface::
+*/
+div:has(> code.language-text) {
+  display: inline;
+}
+
+/* 
+Styles for inline code blocks only (aka, code blocks NOT wrapped with a `pre` parent element
+*/
+code.language-text:not(pre code) {
+  background-color: #d8d8d8 !important;
+  color: #333;
+  text-shadow: none;
 }

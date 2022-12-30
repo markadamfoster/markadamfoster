@@ -1,17 +1,19 @@
 import React from 'react'
-import PropTypes from 'prop-types'
 import styled from 'styled-components'
 import { useStaticQuery, graphql } from 'gatsby'
 
+import DefaultLayout from 'layouts/DefaultLayout'
+import SEO from 'components/Shared/SEO'
 import ArticleListItem from './ArticleListItem'
-import Videos from '../Videos/Videos'
-// import SectionTitle from './SectionTitle'
+import Videos from 'components/Videos/Videos'
 
-function ArticlesPageContent() {
+export const Head = () => <SEO title="Articles" />
+
+export default function ArticlesPage() {
   const data = useStaticQuery(graphql`
     query ArticlesPageQuery {
       allMdx(
-        sort: { fields: frontmatter___date, order: DESC }
+        sort: { frontmatter: { date: DESC } }
         filter: { frontmatter: { published: { eq: true } } }
       ) {
         edges {
@@ -34,24 +36,22 @@ function ArticlesPageContent() {
   const articles = data.allMdx.edges
 
   return (
-    <Wrapper>
-      <h1>Articles</h1>
+    <DefaultLayout>
+      <Wrapper>
+        <h1>Articles</h1>
 
-      <List>
-        {articles.map(({ node: article }) => {
-          return <ArticleListItem key={article.fields.slug} article={article} />
-        })}
-      </List>
+        <List>
+          {articles.map(({ node: article }) => {
+            return (
+              <ArticleListItem key={article.fields.slug} article={article} />
+            )
+          })}
+        </List>
 
-      <Videos />
-    </Wrapper>
+        <Videos />
+      </Wrapper>
+    </DefaultLayout>
   )
-}
-
-export default ArticlesPageContent
-
-ArticlesPageContent.propTypes = {
-  articles: PropTypes.array,
 }
 
 const Wrapper = styled.div`

@@ -7,7 +7,7 @@ export default function Videos() {
   const data = useStaticQuery(graphql`
     query HomePageVideosQuery {
       allMdx(
-        sort: { fields: frontmatter___date, order: DESC }
+        sort: { frontmatter: { date: DESC } }
         filter: {
           frontmatter: { templateKey: { eq: "video" }, featured: { eq: true } }
         }
@@ -23,9 +23,7 @@ export default function Videos() {
               popular
               featuredImage {
                 childImageSharp {
-                  sizes(maxWidth: 630) {
-                    ...GatsbyImageSharpSizes
-                  }
+                  gatsbyImageData(width: 630)
                 }
               }
             }
@@ -36,7 +34,6 @@ export default function Videos() {
   `)
 
   const videos = data.allMdx.edges
-  console.log('videos:', videos)
 
   return (
     <div className="flex flex-col sm:flex-row justify-between">

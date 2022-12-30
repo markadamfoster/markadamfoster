@@ -1,8 +1,8 @@
 import React from 'react'
-import { Helmet } from 'react-helmet'
 
 // Components
 import DefaultLayout from 'layouts/DefaultLayout'
+import SEO from 'components/Shared/SEO'
 import Intro from 'components/Projects/ProjectSingle/IntroSection'
 import Content from 'components/Projects/ProjectSingle/Content'
 import Screenshots from 'components/Projects/ProjectSingle/ScreenshotSection'
@@ -14,6 +14,8 @@ import childDetail from 'assets/projects/admin-console/ac-child-detail.png'
 import guardianDetail from 'assets/projects/admin-console/ac-guardian-detail.png'
 import dashboard from 'assets/projects/admin-console/ac-dashboard.png'
 
+export const Head = () => <SEO title="Admin Console" />
+
 const AdminConsole = () => {
   const project = projectData.find(
     (project) => project.name === 'Admin Console'
@@ -21,8 +23,6 @@ const AdminConsole = () => {
 
   return (
     <DefaultLayout>
-      <Helmet title="Project: Admin Console" />
-
       <Intro project={project} />
 
       <Content>
