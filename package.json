@@ -1,7 +1,7 @@
 {
   "name": "mark-adam-foster",
   "description": "Mark Foster",
-  "version": "2.0.0",
+  "version": "2.1.0",
   "author": "Mark Foster <foster154@gmail.com>",
   "dependencies": {
     "@heroicons/react": "^2.0.13",
