@@ -14,14 +14,13 @@ export default function Hero() {
 
         <Subhead>
           <p>
-            I&apos;m a developer and maker, building primarily with JavaScript
-            and React. Welcome to my digital garden.{' '}
-            <Emoji emoji="🌱" label="seedling" />
+            I&apos;m a developer and maker, building with React and JavaScript.
+            Welcome to my digital garden. <Emoji emoji="🌱" label="seedling" />
           </p>
           <p>
-            Along with crafting software, I enjoy house projects, MTB and gravel
-            cycling, skiing, and splitting time between the corn fields of Iowa
-            and the mountains of Idaho. <Emoji emoji="⛰" label="mountain" />
+            When I'm not behind a screen, you'll find me mountain biking,
+            skiing, and putzing on DIY projects on our home in Boise, Idaho.{' '}
+            <Emoji emoji="⛰️" label="mountain" />
           </p>
         </Subhead>
       </TextCol>
