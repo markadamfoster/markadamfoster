@@ -36,7 +36,7 @@ export default function ArticleLayout({ data, children }) {
 
           <MDXProvider>{children}</MDXProvider>
 
-          <EmailSignup />
+          {/* <EmailSignup /> */}
         </PostContent>
       </PostWrapper>
     </DefaultLayout>

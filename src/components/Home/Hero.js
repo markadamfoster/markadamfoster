@@ -14,8 +14,9 @@ export default function Hero() {
 
         <Subhead>
           <p>
-            I&apos;m a developer and maker, building with React and JavaScript.
-            Welcome to my digital garden. <Emoji emoji="🌱" label="seedling" />
+            I&apos;m a developer and maker, specializing in React and
+            JavaScript. Welcome to my digital garden.{' '}
+            <Emoji emoji="🌱" label="seedling" />
           </p>
           <p>
             When I'm not behind a screen, you'll find me mountain biking,
